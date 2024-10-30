@@ -1,0 +1,10 @@
+relationship 3a84ba5f-c5e7-40e1-aae2-7c2450cf8586
+	joinOnDateBehavior: datePartOnly
+	fromColumn: V_IQVIA_REPORTING_PANEL.RECORD_DATE
+	toColumn: LocalDateTable_f78eee8d-4d6f-4b0a-933a-f475f99704f4.Date
+
+relationship ea601323-736c-444c-88c2-a59eeae3853c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: V_IQVIA_REPORTING_PANEL.LAUNCH_DATE
+	toColumn: LocalDateTable_5d7fe8e5-332f-4090-9a1c-793fc068b9e5.Date
+

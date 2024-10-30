@@ -1,0 +1,410 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/1.2.0/schema.json",
+  "name": "ReportSectiond91dcb17138fa833fbc1",
+  "displayName": "Markt",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "Filter91edf8e602b7fa488964",
+        "displayName": "ATC Level 1",
+        "ordinal": 0,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_IQVIA_REPORTING_PANEL"
+              }
+            },
+            "Property": "ATC_L1_PARENT"
+          }
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "Filter1a2e7789934af4994a27",
+        "displayName": "ATC Level 2",
+        "ordinal": 1,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_IQVIA_REPORTING_PANEL"
+              }
+            },
+            "Property": "ATC_L2_PARENT"
+          }
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "Filterd81a2d2ffbdbc51622b0",
+        "displayName": "ATC Level 3",
+        "ordinal": 2,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_IQVIA_REPORTING_PANEL"
+              }
+            },
+            "Property": "ATC_L3_PARENT"
+          }
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "Filterdceb474f34dd09615b03",
+        "displayName": "ATC Level 4",
+        "ordinal": 3,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_IQVIA_REPORTING_PANEL"
+              }
+            },
+            "Property": "ATC_L4"
+          }
+        },
+        "howCreated": "User",
+        "objects": {
+          "general": [
+            {
+              "properties": {}
+            }
+          ]
+        }
+      },
+      {
+        "name": "Filterb717ad8720fd09760f17",
+        "displayName": "Vertrieb",
+        "ordinal": 4,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_IQVIA_REPORTING_PANEL"
+              }
+            },
+            "Property": "DISTRIBUTOR"
+          }
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "Filter42f92252d2ee6d3d1c92",
+        "displayName": "Sprachregion",
+        "ordinal": 5,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_IQVIA_REPORTING_PANEL"
+              }
+            },
+            "Property": "REGION"
+          }
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "Filter90af008fbafae50a2f8c",
+        "displayName": "Kanal",
+        "ordinal": 6,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_IQVIA_REPORTING_PANEL"
+              }
+            },
+            "Property": "CHANEL_CODE"
+          }
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "Filteraaa8648c93e40399763f",
+        "displayName": "Produkt",
+        "ordinal": 7,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_IQVIA_REPORTING_PANEL"
+              }
+            },
+            "Property": "PRODUCT_DESCRIPTION"
+          }
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "Filter2276af73b2244cd6f326",
+        "displayName": "SKU",
+        "ordinal": 8,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_IQVIA_REPORTING_PANEL"
+              }
+            },
+            "Property": "FULL_NAME"
+          }
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "Filter6403ea5ad50077ca36e3",
+        "displayName": "EAN",
+        "ordinal": 9,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_IQVIA_REPORTING_PANEL"
+              }
+            },
+            "Property": "EAN_CODE"
+          }
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "Filter68360b6e1a4978c3e883",
+        "displayName": "Pharmacode",
+        "ordinal": 10,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_IQVIA_REPORTING_PANEL"
+              }
+            },
+            "Property": "PHARMACODE"
+          }
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "Filterc68e664ba16ffebd1c21",
+        "displayName": "Molekül",
+        "ordinal": 11,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_IQVIA_REPORTING_PANEL"
+              }
+            },
+            "Property": "CONCATENATED_MOLECULE"
+          }
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "Filterd6f40f7f3d06206c2240",
+        "displayName": "Packungsgrösse",
+        "ordinal": 12,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_IQVIA_REPORTING_PANEL"
+              }
+            },
+            "Property": "PRODUCT_QUANTITY"
+          }
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "Filter16ea8efdd0bfe3591de7",
+        "displayName": "Dosierung",
+        "ordinal": 13,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_IQVIA_REPORTING_PANEL"
+              }
+            },
+            "Property": "CONCENTRATION"
+          }
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "Filter4ff781fe8642b17e090c",
+        "displayName": "Appendum",
+        "ordinal": 14,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_IQVIA_REPORTING_PANEL"
+              }
+            },
+            "Property": "NAME_APPENDUM"
+          }
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "Filter2cb3a014873d34995d46",
+        "displayName": "Wirkstoff-Gruppe",
+        "ordinal": 15,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_IQVIA_REPORTING_PANEL"
+              }
+            },
+            "Property": "WIRKSTOFF_GRUPPE_DESCRIPTION"
+          }
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "Filterf4a584b17b9e478aa50f",
+        "displayName": "Handelsform",
+        "ordinal": 16,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_IQVIA_REPORTING_PANEL"
+              }
+            },
+            "Property": "TRADEFORM"
+          }
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "Filterec1466b02861ad2e5be0",
+        "displayName": "Generika Code",
+        "ordinal": 17,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_IQVIA_REPORTING_PANEL"
+              }
+            },
+            "Property": "GENERIKA_DESCRIPTION"
+          }
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "Filterc07db8308f7680b4d979",
+        "displayName": "SL",
+        "ordinal": 18,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_IQVIA_REPORTING_PANEL"
+              }
+            },
+            "Property": "SL_LISTEN_DESCRIPTION"
+          }
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "Filter479f7d3b2f80a4d0e4be",
+        "displayName": "Swissmedic",
+        "ordinal": 19,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_IQVIA_REPORTING_PANEL"
+              }
+            },
+            "Property": "SWISSMEDIC_DESCRIPTION"
+          }
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "Filter666f495e5b1c72bba850",
+        "displayName": "RX/OTC",
+        "ordinal": 20,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_IQVIA_REPORTING_PANEL"
+              }
+            },
+            "Property": "RX_OR_OTC"
+          }
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "Filterba6887e8cd2286684759",
+        "displayName": "NFC",
+        "ordinal": 21,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_IQVIA_REPORTING_PANEL"
+              }
+            },
+            "Property": "NEWFORM_L3_DESCRIPTION"
+          }
+        },
+        "howCreated": "User"
+      }
+    ],
+    "filterSortOrder": "Custom"
+  },
+  "pageBinding": {
+    "name": "Pod",
+    "type": "Default",
+    "parameters": []
+  },
+  "objects": {
+    "outspacePane": [
+      {
+        "properties": {
+          "width": {
+            "expr": {
+              "Literal": {
+                "Value": "303L"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspace": [
+      {
+        "properties": {
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "ThemeDataColor": {
+                    "ColorId": 0,
+                    "Percent": -0.1
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}

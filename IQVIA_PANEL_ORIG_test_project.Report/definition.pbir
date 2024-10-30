@@ -1,0 +1,9 @@
+{
+  "version": "4.0",
+  "datasetReference": {
+    "byPath": {
+      "path": "../IQVIA_PANEL_ORIG_test_project.SemanticModel"
+    },
+    "byConnection": null
+  }
+}

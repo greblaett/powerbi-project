@@ -1,0 +1,38 @@
+table PERIOD
+	lineageTag: 0e4a3d56-d435-455f-95d6-208412e9583e
+
+	measure Selected_Period = MIN(PERIOD[Period_ID])
+		formatString: 0
+		lineageTag: 8426b6eb-78a3-4c1d-8438-40b2a5bea88c
+
+	column Period
+		dataType: string
+		lineageTag: ad4b951a-a833-4727-99a7-a736cfd5c614
+		summarizeBy: none
+		sourceColumn: Period
+		sortByColumn: Period_ID
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Period_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: b8f3d7e6-bd3d-4759-8dcc-3e4dd633923e
+		summarizeBy: count
+		sourceColumn: Period_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PERIOD = m
+		mode: import
+		source =
+				let
+				    Quelle = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45W8i1R0lEyVIrViVaKDHEBso3AbF/HECDbWCk2FgA=", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Period = _t, Period_ID = _t]),
+				    #"Geänderter Typ" = Table.TransformColumnTypes(Quelle,{{"Period", type text}, {"Period_ID", Int64.Type}})
+				in
+				    #"Geänderter Typ"
+
+	annotation PBI_ResultType = Table
+

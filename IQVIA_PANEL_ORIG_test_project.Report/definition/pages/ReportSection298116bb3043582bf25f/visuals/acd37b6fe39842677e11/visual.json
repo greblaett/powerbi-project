@@ -1,0 +1,311 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.3.0/schema.json",
+  "name": "acd37b6fe39842677e11",
+  "position": {
+    "x": 9.35064935064935,
+    "y": 77.142857142857139,
+    "z": 8000,
+    "height": 146.49350649350649,
+    "width": 770.64935064935059,
+    "tabOrder": 8000
+  },
+  "visual": {
+    "visualType": "zebraBiCards2C860CFAA9944091B75F0DBD117F20FA",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "V_IQVIA_REPORTING_PANEL"
+                            }
+                          },
+                          "Name": "Variation",
+                          "Property": "RECORD_DATE"
+                        }
+                      },
+                      "Hierarchy": "Datumshierarchie"
+                    }
+                  },
+                  "Level": "Monat"
+                }
+              },
+              "queryRef": "V_IQVIA_REPORTING_PANEL.RECORD_DATE.Variation.Datumshierarchie.Monat",
+              "nativeQueryRef": "RECORD_DATE Monat",
+              "active": true
+            }
+          ]
+        },
+        "PreviousYear": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_IQVIA_REPORTING_PANEL"
+                    }
+                  },
+                  "Property": "KPI_PY"
+                }
+              },
+              "queryRef": "V_IQVIA_REPORTING_PANEL.KPI_PY",
+              "nativeQueryRef": "KPI_PY"
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_IQVIA_REPORTING_PANEL"
+                    }
+                  },
+                  "Property": "KPI"
+                }
+              },
+              "queryRef": "V_IQVIA_REPORTING_PANEL.KPI",
+              "nativeQueryRef": "Volumen Biomed",
+              "displayName": "Volumen Biomed"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "license": [
+        {
+          "properties": {
+            "licenseKey": {
+              "expr": {
+                "Literal": {
+                  "Value": "'0LfjrjfakcVWdtzhZj+g+A8FtODnjUQz9HBT3p8a3ROtpGcqD7/2MP1XrDV/MJRFJB7buqIF15WXyEKmXtuWBXsiY29tcGFueSI6IkJpb21lZCBBRyIsImV4cGlyeURhdGUiOiIyMDI1LTA0LTA2Iiwibk9mVXNlcnMiOiIxIiwibGljZW5zZVR5cGUiOiJQYWlkIiwidmlzdWFsVHlwZSI6IkFsbCJ9'"
+                }
+              }
+            },
+            "licensedTo": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Biomed AG'"
+                }
+              }
+            },
+            "validUntil": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Sun Apr 06 2025'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "customData": [
+        {
+          "properties": {
+            "version": {
+              "expr": {
+                "Literal": {
+                  "Value": "'7.0.0.3'"
+                }
+              }
+            },
+            "migrations": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\"dataMigrationVersion\":\"7.0.0.3\"}'"
+                }
+              }
+            },
+            "gridData": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\"instance\":0,\"cards\":{\"card-7cfb4c82-d28e-5eab-944b-ef574b8c8328\":{\"id\":\"card-7cfb4c82-d28e-5eab-944b-ef574b8c8328\",\"cardTitle\":\"Volumen Biomed\",\"cardValue\":9721008.79,\"cardType\":1,\"total\":9721008.79,\"group\":\"\",\"groupFormat\":\"\",\"valueFormat\":\"\",\"sortScenarioAbsoluteValue\":0,\"sortScenarioRelativeValue\":0,\"role\":\"Values\",\"axisBreak\":true,\"invertedCategories\":[],\"highlightedCategories\":[],\"highlightedCategoriesColors\":[],\"decimals\":1,\"relativeDecimals\":1,\"basisPointDecimals\":0,\"percentPointDecimals\":0,\"currency\":\"None\",\"chartMax\":0,\"chartMin\":0,\"coordinates\":null,\"hasComments\":false,\"isNegative\":false,\"isMixed\":false}},\"groups\":{}}'"
+                }
+              }
+            },
+            "dataVersion": {
+              "expr": {
+                "Literal": {
+                  "Value": "32L"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "actual": {
+              "expr": {
+                "Literal": {
+                  "Value": "'LJ'"
+                }
+              }
+            },
+            "actualPreviousYear": {
+              "expr": {
+                "Literal": {
+                  "Value": "'ΔLJ vs. VJ'"
+                }
+              }
+            },
+            "actualPreviousYearPercent": {
+              "expr": {
+                "Literal": {
+                  "Value": "'ΔVJ%'"
+                }
+              }
+            },
+            "previousYear": {
+              "expr": {
+                "Literal": {
+                  "Value": "'VJ'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "design": [
+        {
+          "properties": {
+            "style": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "Filter387ee997ed5c123e03e5",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_IQVIA_REPORTING_PANEL"
+              }
+            },
+            "Property": "DISTRIBUTOR"
+          }
+        },
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "v",
+              "Entity": "V_IQVIA_REPORTING_PANEL",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "v"
+                          }
+                        },
+                        "Property": "DISTRIBUTOR"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Biomed'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User",
+        "isHiddenInViewMode": true,
+        "isLockedInViewMode": true
+      },
+      {
+        "name": "Filtere1aef4193dad3393e664",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "V_IQVIA_REPORTING_PANEL"
+                      }
+                    },
+                    "Name": "Variation",
+                    "Property": "RECORD_DATE"
+                  }
+                },
+                "Hierarchy": "Datumshierarchie"
+              }
+            },
+            "Level": "Monat"
+          }
+        },
+        "isHiddenInViewMode": true
+      },
+      {
+        "name": "Filter220a8012f87d63461b37",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_IQVIA_REPORTING_PANEL"
+              }
+            },
+            "Property": "KPI"
+          }
+        },
+        "type": "Advanced",
+        "isHiddenInViewMode": true
+      },
+      {
+        "name": "Filter4a323d514a69d7261c22",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_IQVIA_REPORTING_PANEL"
+              }
+            },
+            "Property": "KPI_PY"
+          }
+        },
+        "type": "Advanced",
+        "isHiddenInViewMode": true
+      }
+    ]
+  }
+}

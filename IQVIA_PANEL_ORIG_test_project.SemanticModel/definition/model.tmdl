@@ -1,0 +1,27 @@
+model Model
+	culture: de-CH
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: de-CH
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["V_IQVIA_REPORTING_PANEL","KPIs","PERIOD"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.137.952.0 (24.10)
+
+annotation __TEdtr = 1
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table V_IQVIA_REPORTING_PANEL
+ref table DateTableTemplate_8dfda5b4-eeee-4e9c-a2c4-42989679e1c8
+ref table LocalDateTable_f78eee8d-4d6f-4b0a-933a-f475f99704f4
+ref table LocalDateTable_5d7fe8e5-332f-4090-9a1c-793fc068b9e5
+ref table KPIs
+ref table PERIOD
+
+ref cultureInfo de-CH
+

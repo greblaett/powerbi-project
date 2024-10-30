@@ -1,0 +1,8 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/1.2.0/schema.json",
+  "name": "ReportSection0952f61a9db5f1b833a1",
+  "displayName": "Intro",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280
+}

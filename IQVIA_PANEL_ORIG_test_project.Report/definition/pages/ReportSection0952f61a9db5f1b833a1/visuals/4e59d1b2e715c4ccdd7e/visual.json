@@ -1,0 +1,48 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.3.0/schema.json",
+  "name": "4e59d1b2e715c4ccdd7e",
+  "position": {
+    "x": 13.246753246753245,
+    "y": 15.584415584415583,
+    "z": 8000,
+    "height": 61.558441558441551,
+    "width": 358.44155844155841,
+    "tabOrder": 8000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Link Berichtsdokumentation:",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Verdana"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "IQVIA_DOKU_PANEL",
+                    "textStyle": {
+                      "fontFamily": "Verdana"
+                    },
+                    "url": "https://biomedag.sharepoint.com/sites/Intranet_IT/_layouts/15/guestaccess.aspx?share=EQQiNcGuFbZEsThusTa1__UB8bSCp_4algDp2pxsdJ6Fdw&e=dzMoOb"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

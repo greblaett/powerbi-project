@@ -1,0 +1,541 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.3.0/schema.json",
+  "name": "343a221b476c7d7a3c6a",
+  "position": {
+    "x": 789.35064935064929,
+    "y": 229.87012987012986,
+    "z": 8000,
+    "height": 482.33766233766232,
+    "width": 479.22077922077921,
+    "tabOrder": 8000
+  },
+  "visual": {
+    "visualType": "ZebraBITablesBAE31B370F254F808553548EFB35BFA5",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_IQVIA_REPORTING_PANEL"
+                    }
+                  },
+                  "Property": "PRODUCT_DESCRIPTION"
+                }
+              },
+              "queryRef": "V_IQVIA_REPORTING_PANEL.PRODUCT_DESCRIPTION",
+              "nativeQueryRef": "PRODUCT_DESCRIPTION",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_IQVIA_REPORTING_PANEL"
+                    }
+                  },
+                  "Property": "FULL_NAME"
+                }
+              },
+              "queryRef": "V_IQVIA_REPORTING_PANEL.FULL_NAME",
+              "nativeQueryRef": "FULL_NAME",
+              "active": false
+            }
+          ]
+        },
+        "PreviousYear": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_IQVIA_REPORTING_PANEL"
+                    }
+                  },
+                  "Property": "KPI_PY"
+                }
+              },
+              "queryRef": "V_IQVIA_REPORTING_PANEL.KPI_PY",
+              "nativeQueryRef": "KPI_PY"
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_IQVIA_REPORTING_PANEL"
+                    }
+                  },
+                  "Property": "KPI"
+                }
+              },
+              "queryRef": "V_IQVIA_REPORTING_PANEL.KPI",
+              "nativeQueryRef": "KPI"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_IQVIA_REPORTING_PANEL"
+                    }
+                  },
+                  "Property": "KPI_EI"
+                }
+              },
+              "queryRef": "V_IQVIA_REPORTING_PANEL.KPI_EI",
+              "nativeQueryRef": "KPI_EI"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_IQVIA_REPORTING_PANEL"
+                    }
+                  },
+                  "Property": "KPI_2PY"
+                }
+              },
+              "queryRef": "V_IQVIA_REPORTING_PANEL.KPI_2PY",
+              "nativeQueryRef": "KPI_2PY"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_IQVIA_REPORTING_PANEL"
+                    }
+                  },
+                  "Property": "Delta VVJ"
+                }
+              },
+              "queryRef": "V_IQVIA_REPORTING_PANEL.Delta VVJ",
+              "nativeQueryRef": "Delta VVJ"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_IQVIA_REPORTING_PANEL"
+                    }
+                  },
+                  "Property": "VVJ_GROWTH"
+                }
+              },
+              "queryRef": "V_IQVIA_REPORTING_PANEL.VVJ_GROWTH",
+              "nativeQueryRef": "VVJ_GROWTH"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "V_IQVIA_REPORTING_PANEL"
+                  }
+                },
+                "Property": "KPI"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "version": [
+        {
+          "properties": {
+            "version": {
+              "expr": {
+                "Literal": {
+                  "Value": "'7.1.0'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "chartSettings": [
+        {
+          "properties": {
+            "columnSettings": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\"actual\":{\"invert\":false,\"order\":4,\"scaleGroup\":1,\"format\":0,\"useMeasureName\":false,\"pbiFormatString\":\"#,0\",\"suppressOthers\":false,\"tableView\":{\"bold\":false,\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":false,\"hiddenFromGroups\":[]},\"chartView\":{\"bold\":false,\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":false,\"hiddenFromGroups\":[]}},\"previousYear\":{\"invert\":false,\"order\":2,\"scaleGroup\":1,\"format\":0,\"useMeasureName\":false,\"pbiFormatString\":\"#,0\",\"suppressOthers\":false,\"tableView\":{\"bold\":false,\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":false,\"hiddenFromGroups\":[]},\"chartView\":{\"bold\":false,\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":false,\"hiddenFromGroups\":[]}},\"actual-previousYear\":{\"invert\":false,\"order\":7,\"scaleGroup\":1,\"format\":1,\"useMeasureName\":false,\"pbiFormatString\":\"#,0\",\"suppressOthers\":false,\"tableView\":{\"bold\":false,\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":false,\"hiddenFromGroups\":[]},\"chartView\":{\"bold\":false,\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":2,\"hidden\":false,\"hiddenFromGroups\":[]}},\"actual-previousYear-percent\":{\"invert\":false,\"order\":6,\"scaleGroup\":1,\"format\":2,\"useMeasureName\":false,\"pbiFormatString\":\"#,0\",\"suppressOthers\":false,\"tableView\":{\"bold\":false,\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":false,\"hiddenFromGroups\":[]},\"chartView\":{\"bold\":false,\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":1,\"hidden\":false,\"hiddenFromGroups\":[]}},\"KPI_EI\":{\"header\":\"EI\",\"invert\":false,\"order\":8,\"format\":0,\"useMeasureName\":false,\"pbiFormatString\":\"#,0\",\"percentageFormat\":\"\",\"showPercentageInLabel\":1,\"scaleGroup\":-1,\"suppressOthers\":false,\"tableView\":{\"bold\":false,\"decimalPlaces\":-1,\"displayUnits\":\"Default\",\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":false,\"valueChart\":0,\"absoluteChart\":0,\"hiddenFromGroups\":[]},\"chartView\":{\"bold\":false,\"decimalPlaces\":-1,\"displayUnits\":\"Default\",\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":true,\"valueChart\":0,\"absoluteChart\":0,\"hiddenFromGroups\":[]}},\"KPI_2PY\":{\"header\":\"Sales VVJ\",\"invert\":false,\"order\":null,\"format\":0,\"useMeasureName\":false,\"percentageFormat\":\"\",\"showPercentageInLabel\":1,\"scaleGroup\":-1,\"suppressOthers\":false,\"tableView\":{\"bold\":false,\"decimalPlaces\":-1,\"displayUnits\":\"Default\",\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":true,\"valueChart\":0,\"absoluteChart\":0,\"hiddenFromGroups\":[],\"columnFixedWidth\":200},\"chartView\":{\"bold\":false,\"decimalPlaces\":-1,\"displayUnits\":\"Default\",\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":4,\"border\":\"\",\"showAsTable\":1,\"hidden\":true,\"valueChart\":0,\"absoluteChart\":0,\"hiddenFromGroups\":[],\"columnFixedWidth\":200}},\"Delta VVJ\":{\"header\":\"ΔVVJ\",\"invert\":false,\"order\":1,\"format\":0,\"useMeasureName\":false,\"pbiFormatString\":\"0\",\"percentageFormat\":\"\",\"showPercentageInLabel\":1,\"scaleGroup\":-1,\"suppressOthers\":false,\"tableView\":{\"bold\":false,\"decimalPlaces\":-1,\"displayUnits\":\"Default\",\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":true,\"valueChart\":0,\"absoluteChart\":0,\"hiddenFromGroups\":[],\"columnFixedWidth\":200},\"chartView\":{\"bold\":false,\"decimalPlaces\":-1,\"displayUnits\":\"Default\",\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":true,\"valueChart\":0,\"absoluteChart\":0,\"hiddenFromGroups\":[],\"columnFixedWidth\":200}},\"VVJ_GROWTH\":{\"header\":\"ΔVVJ%\",\"invert\":false,\"format\":3,\"useMeasureName\":false,\"pbiFormatString\":\"0\",\"percentageFormat\":\"0%\",\"showPercentageInLabel\":1,\"scaleGroup\":-1,\"suppressOthers\":false,\"tableView\":{\"bold\":false,\"decimalPlaces\":-1,\"displayUnits\":\"Default\",\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":true,\"valueChart\":0,\"absoluteChart\":0,\"hiddenFromGroups\":[],\"columnFixedWidth\":200},\"chartView\":{\"bold\":false,\"decimalPlaces\":-1,\"displayUnits\":\"Default\",\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":true,\"valueChart\":0,\"absoluteChart\":0,\"hiddenFromGroups\":[],\"columnFixedWidth\":200}},\"MAT_EI\":{\"header\":\"MAT_EI\",\"invert\":false,\"format\":0,\"percentageFormat\":\"\",\"showPercentageInLabel\":1,\"scaleGroup\":-1,\"suppressOthers\":false,\"tableView\":{\"bold\":false,\"decimalPlaces\":-1,\"displayUnits\":\"Default\",\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":false,\"valueChart\":0,\"absoluteChart\":0,\"hiddenFromGroups\":[]},\"chartView\":{\"bold\":false,\"decimalPlaces\":-1,\"displayUnits\":\"Default\",\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":true,\"valueChart\":0,\"absoluteChart\":0,\"hiddenFromGroups\":[]},\"order\":null},\"MAT_SP_MA\":{\"header\":\"MAT_SP_MA\",\"invert\":false,\"format\":0,\"percentageFormat\":\"\",\"showPercentageInLabel\":1,\"scaleGroup\":-1,\"suppressOthers\":false,\"tableView\":{\"bold\":false,\"decimalPlaces\":-1,\"displayUnits\":\"Default\",\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":false,\"valueChart\":0,\"absoluteChart\":0,\"hiddenFromGroups\":[]},\"chartView\":{\"bold\":false,\"decimalPlaces\":-1,\"displayUnits\":\"Default\",\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":true,\"valueChart\":0,\"absoluteChart\":0,\"hiddenFromGroups\":[]},\"order\":null}}'"
+                }
+              }
+            },
+            "showMajorGridlines": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showGridlines": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showAsTable": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "suppressZeros": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "suppressNulls": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "types": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Actual / Absolute / Relative'"
+                }
+              }
+            },
+            "firstTimeShowingColumnAdder": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showGridlinesTable": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "absoluteChart": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categoriesMetadata": [
+        {
+          "properties": {
+            "collapsedVirtually": {
+              "expr": {
+                "Literal": {
+                  "Value": "'[]'"
+                }
+              }
+            },
+            "userChangedExpandCollapse": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "licenseSettings": [
+        {
+          "properties": {
+            "licenseKey": {
+              "expr": {
+                "Literal": {
+                  "Value": "'0LfjrjfakcVWdtzhZj+g+A8FtODnjUQz9HBT3p8a3ROtpGcqD7/2MP1XrDV/MJRFJB7buqIF15WXyEKmXtuWBXsiY29tcGFueSI6IkJpb21lZCBBRyIsImV4cGlyeURhdGUiOiIyMDI1LTA0LTA2Iiwibk9mVXNlcnMiOiIxIiwibGljZW5zZVR5cGUiOiJQYWlkIiwidmlzdWFsVHlwZSI6IkFsbCJ9'"
+                }
+              }
+            },
+            "lastLicenseCheck": {
+              "expr": {
+                "Literal": {
+                  "Value": "'2024-05-13T07:11:38.407Z'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "proFeaturesSettings": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "proFeaturesUnlocked": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "proFeaturesDisabledByUser": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "titleSettings": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Top SKUs'"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Verdana'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dataLabelSettings": [
+        {
+          "properties": {
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Verdana'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            },
+            "units": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Auto'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categorySettings": [
+        {
+          "properties": {
+            "freeze": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showTopNForm": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "displayOptions": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "topNSettings": {
+              "expr": {
+                "Literal": {
+                  "Value": "'[{\"category\":\"SKU\",\"dataProperty\":2,\"columnName\":\"actual-previousYear\",\"level\":0,\"number\":15,\"numberInFocusMode\":20,\"type\":3},{\"category\":\"SKU\",\"dataProperty\":0,\"columnName\":\"actual\",\"level\":1,\"number\":10,\"numberInFocusMode\":20,\"type\":1}]'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "sortSettings": [
+        {
+          "properties": {
+            "columnName": {
+              "expr": {
+                "Literal": {
+                  "Value": "'VVJ_GROWTH'"
+                }
+              }
+            },
+            "chartSort": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "categorySort": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legendHeaderSettings": [
+        {
+          "properties": {
+            "actual-previousYear": {
+              "expr": {
+                "Literal": {
+                  "Value": "'ΔLJ vs. VJ'"
+                }
+              }
+            },
+            "previousYear": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Sales VJ'"
+                }
+              }
+            },
+            "actual": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Sales'"
+                }
+              }
+            },
+            "actual-previousYear-percent": {
+              "expr": {
+                "Literal": {
+                  "Value": "'ΔVJ%'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "Filter80ddc179e00579c4bfd7",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_IQVIA_REPORTING_PANEL"
+              }
+            },
+            "Property": "FULL_NAME"
+          }
+        },
+        "isHiddenInViewMode": true
+      },
+      {
+        "name": "Filterb4348755f65b25e90186",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_IQVIA_REPORTING_PANEL"
+              }
+            },
+            "Property": "KPI"
+          }
+        },
+        "type": "Advanced",
+        "isHiddenInViewMode": true
+      },
+      {
+        "name": "Filter1e033af62364f7fea939",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_IQVIA_REPORTING_PANEL"
+              }
+            },
+            "Property": "KPI_EI"
+          }
+        },
+        "type": "Advanced",
+        "isHiddenInViewMode": true
+      },
+      {
+        "name": "Filterca2190a1f0bf9a01ff5e",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_IQVIA_REPORTING_PANEL"
+              }
+            },
+            "Property": "KPI_PY"
+          }
+        },
+        "type": "Advanced",
+        "isHiddenInViewMode": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,463 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.3.0/schema.json",
+  "name": "63d12ec07d0a87c84763",
+  "position": {
+    "x": 790.12987012987,
+    "y": 153.50649350649348,
+    "z": 7000,
+    "height": 70.129870129870127,
+    "width": 478.44155844155841,
+    "tabOrder": 7000
+  },
+  "visual": {
+    "visualType": "ZebraBITablesBAE31B370F254F808553548EFB35BFA5",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "GroupRef": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_IQVIA_REPORTING_PANEL"
+                    }
+                  },
+                  "Property": "CHANEL_CODE (Gruppen)",
+                  "GroupedColumns": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "V_IQVIA_REPORTING_PANEL"
+                          }
+                        },
+                        "Property": "CHANEL_CODE"
+                      }
+                    }
+                  ]
+                }
+              },
+              "queryRef": "V_IQVIA_REPORTING_PANEL.CHANEL_CODE (Gruppen)",
+              "nativeQueryRef": "CHANEL_CODE (Gruppen)",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_IQVIA_REPORTING_PANEL"
+                    }
+                  },
+                  "Property": "CHANEL_CODE"
+                }
+              },
+              "queryRef": "V_IQVIA_REPORTING_PANEL.CHANEL_CODE",
+              "nativeQueryRef": "CHANEL_CODE",
+              "active": false
+            }
+          ]
+        },
+        "PreviousYear": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_IQVIA_REPORTING_PANEL"
+                    }
+                  },
+                  "Property": "KPI_PY"
+                }
+              },
+              "queryRef": "V_IQVIA_REPORTING_PANEL.KPI_PY",
+              "nativeQueryRef": "KPI_PY"
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_IQVIA_REPORTING_PANEL"
+                    }
+                  },
+                  "Property": "KPI"
+                }
+              },
+              "queryRef": "V_IQVIA_REPORTING_PANEL.KPI",
+              "nativeQueryRef": "KPI"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "V_IQVIA_REPORTING_PANEL"
+                  }
+                },
+                "Property": "KPI"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "expansionStates": [
+      {
+        "roles": [
+          "Category"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "V_IQVIA_REPORTING_PANEL.CHANEL_CODE (Gruppen)"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_IQVIA_REPORTING_PANEL"
+                    }
+                  },
+                  "Property": "CHANEL_CODE (Gruppen)"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "V_IQVIA_REPORTING_PANEL.CHANEL_CODE"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          }
+        ],
+        "root": {}
+      }
+    ],
+    "objects": {
+      "version": [
+        {
+          "properties": {
+            "version": {
+              "expr": {
+                "Literal": {
+                  "Value": "'7.1.0'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "chartSettings": [
+        {
+          "properties": {
+            "columnSettings": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\"actual\":{\"invert\":false,\"scaleGroup\":1,\"format\":0,\"useMeasureName\":false,\"pbiFormatString\":\"#,0\",\"suppressOthers\":false,\"tableView\":{\"bold\":false,\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":false,\"hiddenFromGroups\":[]},\"chartView\":{\"bold\":false,\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":2,\"hidden\":false,\"hiddenFromGroups\":[]}},\"previousYear\":{\"invert\":false,\"scaleGroup\":1,\"format\":0,\"useMeasureName\":false,\"pbiFormatString\":\"#,0\",\"suppressOthers\":false,\"tableView\":{\"bold\":false,\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":false,\"hiddenFromGroups\":[]},\"chartView\":{\"bold\":false,\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":true,\"hiddenFromGroups\":[]}},\"actual-previousYear\":{\"invert\":false,\"scaleGroup\":1,\"format\":1,\"useMeasureName\":false,\"pbiFormatString\":\"#,0\",\"suppressOthers\":false,\"tableView\":{\"bold\":false,\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":false,\"hiddenFromGroups\":[]},\"chartView\":{\"bold\":false,\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":true,\"hiddenFromGroups\":[]}},\"actual-previousYear-percent\":{\"invert\":false,\"scaleGroup\":1,\"format\":2,\"useMeasureName\":false,\"pbiFormatString\":\"#,0\",\"suppressOthers\":false,\"tableView\":{\"bold\":false,\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":false,\"hiddenFromGroups\":[]},\"chartView\":{\"bold\":false,\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":1,\"hidden\":false,\"hiddenFromGroups\":[]}},\"MAT_EI\":{\"header\":\"MAT_EI\",\"invert\":false,\"format\":0,\"percentageFormat\":\"\",\"showPercentageInLabel\":1,\"scaleGroup\":-1,\"suppressOthers\":false,\"tableView\":{\"bold\":false,\"decimalPlaces\":-1,\"displayUnits\":\"Default\",\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":false,\"valueChart\":0,\"absoluteChart\":0,\"hiddenFromGroups\":[]},\"chartView\":{\"bold\":false,\"decimalPlaces\":-1,\"displayUnits\":\"Default\",\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":false,\"valueChart\":0,\"absoluteChart\":0,\"hiddenFromGroups\":[]}},\"MAT_SP_MA\":{\"header\":\"MAT_SP_MA\",\"invert\":false,\"format\":0,\"percentageFormat\":\"\",\"showPercentageInLabel\":1,\"scaleGroup\":-1,\"suppressOthers\":false,\"tableView\":{\"bold\":false,\"decimalPlaces\":-1,\"displayUnits\":\"Default\",\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":false,\"valueChart\":0,\"absoluteChart\":0,\"hiddenFromGroups\":[]},\"chartView\":{\"bold\":false,\"decimalPlaces\":-1,\"displayUnits\":\"Default\",\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":false,\"valueChart\":0,\"absoluteChart\":0,\"hiddenFromGroups\":[]}}}'"
+                }
+              }
+            },
+            "showMajorGridlines": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showGridlines": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showAsTable": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "suppressZeros": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "suppressNulls": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "types": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Actual / Absolute / Relative'"
+                }
+              }
+            },
+            "firstTimeShowingColumnAdder": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "valueChart": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "showGridlinesTable": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categoriesMetadata": [
+        {
+          "properties": {
+            "collapsedVirtually": {
+              "expr": {
+                "Literal": {
+                  "Value": "'[]'"
+                }
+              }
+            },
+            "userChangedExpandCollapse": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "licenseSettings": [
+        {
+          "properties": {
+            "licenseKey": {
+              "expr": {
+                "Literal": {
+                  "Value": "'0LfjrjfakcVWdtzhZj+g+A8FtODnjUQz9HBT3p8a3ROtpGcqD7/2MP1XrDV/MJRFJB7buqIF15WXyEKmXtuWBXsiY29tcGFueSI6IkJpb21lZCBBRyIsImV4cGlyeURhdGUiOiIyMDI1LTA0LTA2Iiwibk9mVXNlcnMiOiIxIiwibGljZW5zZVR5cGUiOiJQYWlkIiwidmlzdWFsVHlwZSI6IkFsbCJ9'"
+                }
+              }
+            },
+            "lastLicenseCheck": {
+              "expr": {
+                "Literal": {
+                  "Value": "'2024-05-13T07:11:38.273Z'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "proFeaturesSettings": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "proFeaturesUnlocked": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "proFeaturesDisabledByUser": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "titleSettings": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dataLabelSettings": [
+        {
+          "properties": {
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Verdana'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "units": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Auto'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categorySettings": [
+        {
+          "properties": {
+            "freeze": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showTopNForm": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "displayOptions": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legendHeaderSettings": [
+        {
+          "properties": {
+            "actual": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Sales'"
+                }
+              }
+            },
+            "previousYear": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Sales VJ'"
+                }
+              }
+            },
+            "actual-previousYear": {
+              "expr": {
+                "Literal": {
+                  "Value": "'ΔLJ vs. VJ'"
+                }
+              }
+            },
+            "actual-previousYear-percent": {
+              "expr": {
+                "Literal": {
+                  "Value": "'ΔVJ%'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "Filterf5797b3d32187858eb8d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_IQVIA_REPORTING_PANEL"
+              }
+            },
+            "Property": "CHANEL_CODE"
+          }
+        },
+        "isHiddenInViewMode": true
+      },
+      {
+        "name": "Filterefa8825619d9f06bcbf6",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_IQVIA_REPORTING_PANEL"
+              }
+            },
+            "Property": "KPI"
+          }
+        },
+        "type": "Advanced",
+        "isHiddenInViewMode": true
+      },
+      {
+        "name": "Filter019ef5c225333457dd2d",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_IQVIA_REPORTING_PANEL"
+              }
+            },
+            "Property": "KPI_PY"
+          }
+        },
+        "type": "Advanced",
+        "isHiddenInViewMode": true
+      }
+    ]
+  }
+}

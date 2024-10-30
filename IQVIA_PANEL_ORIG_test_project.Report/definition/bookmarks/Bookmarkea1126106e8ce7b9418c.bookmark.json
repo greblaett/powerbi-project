@@ -1,0 +1,714 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.2.0/schema.json",
+  "displayName": "Pantozol Control",
+  "name": "Bookmarkea1126106e8ce7b9418c",
+  "options": {
+    "targetVisualNames": []
+  },
+  "explorationState": {
+    "version": "1.3",
+    "activeSection": "ReportSectiond91dcb17138fa833fbc1",
+    "filters": {
+      "byExpr": [
+        {
+          "name": "Filter59ee7ab5002dba95267d",
+          "type": "Categorical",
+          "filter": {
+            "Version": 2,
+            "From": [
+              {
+                "Name": "v",
+                "Entity": "V_IQVIA_REPORTING_PANEL",
+                "Type": 0
+              }
+            ],
+            "Where": [
+              {
+                "Condition": {
+                  "In": {
+                    "Expressions": [
+                      {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "v"
+                            }
+                          },
+                          "Property": "ATC_L4"
+                        }
+                      }
+                    ],
+                    "Values": [
+                      [
+                        {
+                          "Literal": {
+                            "Value": "'A02B2 Protonenpumpenhemmer'"
+                          }
+                        }
+                      ]
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          "expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "V_IQVIA_REPORTING_PANEL"
+                }
+              },
+              "Property": "ATC_L4"
+            }
+          },
+          "howCreated": 1
+        },
+        {
+          "name": "Filter9e24abf10b368001c538",
+          "type": "Categorical",
+          "expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "V_IQVIA_REPORTING_PANEL"
+                }
+              },
+              "Property": "PRODUCT_DESCRIPTION"
+            }
+          },
+          "howCreated": 1
+        },
+        {
+          "name": "Filter3306e23dbb5ea55ceb09",
+          "type": "Categorical",
+          "expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "V_IQVIA_REPORTING_PANEL"
+                }
+              },
+              "Property": "SL_LISTEN_DESCRIPTION"
+            }
+          },
+          "howCreated": 1
+        },
+        {
+          "name": "Filter23264bb037a6c7e7cc6b",
+          "type": "Categorical",
+          "expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "V_IQVIA_REPORTING_PANEL"
+                }
+              },
+              "Property": "NEWFORM_L2_PARENT"
+            }
+          },
+          "howCreated": 1
+        }
+      ]
+    },
+    "sections": {
+      "ReportSectiond91dcb17138fa833fbc1": {
+        "filters": {
+          "byExpr": [
+            {
+              "name": "Filter91edf8e602b7fa488964",
+              "type": "Categorical",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_IQVIA_REPORTING_PANEL"
+                    }
+                  },
+                  "Property": "ATC_L1_PARENT"
+                }
+              },
+              "howCreated": 1
+            },
+            {
+              "name": "Filter1a2e7789934af4994a27",
+              "type": "Categorical",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_IQVIA_REPORTING_PANEL"
+                    }
+                  },
+                  "Property": "ATC_L2_PARENT"
+                }
+              },
+              "howCreated": 1
+            },
+            {
+              "name": "Filterd81a2d2ffbdbc51622b0",
+              "type": "Categorical",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_IQVIA_REPORTING_PANEL"
+                    }
+                  },
+                  "Property": "ATC_L3_PARENT"
+                }
+              },
+              "howCreated": 1
+            },
+            {
+              "name": "Filterdceb474f34dd09615b03",
+              "type": "Categorical",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_IQVIA_REPORTING_PANEL"
+                    }
+                  },
+                  "Property": "ATC_L4"
+                }
+              },
+              "howCreated": 1
+            },
+            {
+              "name": "Filterb717ad8720fd09760f17",
+              "type": "Categorical",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_IQVIA_REPORTING_PANEL"
+                    }
+                  },
+                  "Property": "DISTRIBUTOR"
+                }
+              },
+              "howCreated": 1
+            },
+            {
+              "name": "Filter42f92252d2ee6d3d1c92",
+              "type": "Categorical",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_IQVIA_REPORTING_PANEL"
+                    }
+                  },
+                  "Property": "REGION"
+                }
+              },
+              "howCreated": 1
+            },
+            {
+              "name": "Filter90af008fbafae50a2f8c",
+              "type": "Categorical",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_IQVIA_REPORTING_PANEL"
+                    }
+                  },
+                  "Property": "CHANEL_CODE"
+                }
+              },
+              "howCreated": 1
+            },
+            {
+              "name": "Filteraaa8648c93e40399763f",
+              "type": "Categorical",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_IQVIA_REPORTING_PANEL"
+                    }
+                  },
+                  "Property": "PRODUCT_DESCRIPTION"
+                }
+              },
+              "howCreated": 1
+            },
+            {
+              "name": "Filter2276af73b2244cd6f326",
+              "type": "Categorical",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_IQVIA_REPORTING_PANEL"
+                    }
+                  },
+                  "Property": "FULL_NAME"
+                }
+              },
+              "howCreated": 1
+            },
+            {
+              "name": "Filter6403ea5ad50077ca36e3",
+              "type": "Categorical",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_IQVIA_REPORTING_PANEL"
+                    }
+                  },
+                  "Property": "EAN_CODE"
+                }
+              },
+              "howCreated": 1
+            },
+            {
+              "name": "Filter68360b6e1a4978c3e883",
+              "type": "Categorical",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_IQVIA_REPORTING_PANEL"
+                    }
+                  },
+                  "Property": "PHARMACODE"
+                }
+              },
+              "howCreated": 1
+            },
+            {
+              "name": "Filterc68e664ba16ffebd1c21",
+              "type": "Categorical",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_IQVIA_REPORTING_PANEL"
+                    }
+                  },
+                  "Property": "CONCATENATED_MOLECULE"
+                }
+              },
+              "howCreated": 1
+            },
+            {
+              "name": "Filterd6f40f7f3d06206c2240",
+              "type": "Categorical",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_IQVIA_REPORTING_PANEL"
+                    }
+                  },
+                  "Property": "PRODUCT_QUANTITY"
+                }
+              },
+              "howCreated": 1
+            },
+            {
+              "name": "Filter16ea8efdd0bfe3591de7",
+              "type": "Categorical",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_IQVIA_REPORTING_PANEL"
+                    }
+                  },
+                  "Property": "CONCENTRATION"
+                }
+              },
+              "howCreated": 1
+            },
+            {
+              "name": "Filter4ff781fe8642b17e090c",
+              "type": "Categorical",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_IQVIA_REPORTING_PANEL"
+                    }
+                  },
+                  "Property": "NAME_APPENDUM"
+                }
+              },
+              "howCreated": 1
+            },
+            {
+              "name": "Filter2cb3a014873d34995d46",
+              "type": "Categorical",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_IQVIA_REPORTING_PANEL"
+                    }
+                  },
+                  "Property": "WIRKSTOFF_GRUPPE_DESCRIPTION"
+                }
+              },
+              "howCreated": 1
+            },
+            {
+              "name": "Filterf4a584b17b9e478aa50f",
+              "type": "Categorical",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_IQVIA_REPORTING_PANEL"
+                    }
+                  },
+                  "Property": "TRADEFORM"
+                }
+              },
+              "howCreated": 1
+            },
+            {
+              "name": "Filterec1466b02861ad2e5be0",
+              "type": "Categorical",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_IQVIA_REPORTING_PANEL"
+                    }
+                  },
+                  "Property": "GENERIKA_DESCRIPTION"
+                }
+              },
+              "howCreated": 1
+            },
+            {
+              "name": "Filterc07db8308f7680b4d979",
+              "type": "Categorical",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_IQVIA_REPORTING_PANEL"
+                    }
+                  },
+                  "Property": "SL_LISTEN_DESCRIPTION"
+                }
+              },
+              "howCreated": 1
+            },
+            {
+              "name": "Filter479f7d3b2f80a4d0e4be",
+              "type": "Categorical",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_IQVIA_REPORTING_PANEL"
+                    }
+                  },
+                  "Property": "SWISSMEDIC_DESCRIPTION"
+                }
+              },
+              "howCreated": 1
+            },
+            {
+              "name": "Filter666f495e5b1c72bba850",
+              "type": "Categorical",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_IQVIA_REPORTING_PANEL"
+                    }
+                  },
+                  "Property": "RX_OR_OTC"
+                }
+              },
+              "howCreated": 1
+            },
+            {
+              "name": "Filterba6887e8cd2286684759",
+              "type": "Categorical",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_IQVIA_REPORTING_PANEL"
+                    }
+                  },
+                  "Property": "NEWFORM_L3_DESCRIPTION"
+                }
+              },
+              "howCreated": 1
+            }
+          ]
+        },
+        "visualContainers": {
+          "fba8015c48b336a2cd4b": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "d8f418a945764998b62a": {
+            "filters": {
+              "byName": {
+                "Filter91d071a730365861c6a7": {
+                  "name": "Filter91d071a730365861c6a7",
+                  "type": "RelativeDate",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "v",
+                        "Entity": "V_IQVIA_REPORTING_PANEL",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Between": {
+                            "Expression": {
+                              "Column": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Source": "v"
+                                  }
+                                },
+                                "Property": "RECORD_DATE"
+                              }
+                            },
+                            "LowerBound": {
+                              "DateSpan": {
+                                "Expression": {
+                                  "DateAdd": {
+                                    "Expression": {
+                                      "DateAdd": {
+                                        "Expression": {
+                                          "Now": {}
+                                        },
+                                        "Amount": 1,
+                                        "TimeUnit": 0
+                                      }
+                                    },
+                                    "Amount": -12,
+                                    "TimeUnit": 2
+                                  }
+                                },
+                                "TimeUnit": 0
+                              }
+                            },
+                            "UpperBound": {
+                              "DateSpan": {
+                                "Expression": {
+                                  "Now": {}
+                                },
+                                "TimeUnit": 0
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "V_IQVIA_REPORTING_PANEL"
+                        }
+                      },
+                      "Property": "RECORD_DATE"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                "Filter78c4f27be514530a21ce": {
+                  "name": "Filter78c4f27be514530a21ce",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "p",
+                        "Entity": "PERIOD",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "p"
+                                    }
+                                  },
+                                  "Property": "Period"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Mt'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PERIOD"
+                        }
+                      },
+                      "Property": "Period"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                "Filter0232cbfbdddc9370586d": {
+                  "name": "Filter0232cbfbdddc9370586d",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "k",
+                        "Entity": "KPIs",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "k"
+                                    }
+                                  },
+                                  "Property": "KPI"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Wert G'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "KPIs"
+                        }
+                      },
+                      "Property": "KPI"
+                    }
+                  },
+                  "howCreated": 1
+                }
+              }
+            },
+            "singleVisual": {
+              "visualType": "tableEx",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "V_IQVIA_REPORTING_PANEL"
+                        }
+                      },
+                      "Property": "KPI"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "098df5e35a346ec2a2c8": {
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "V_IQVIA_REPORTING_PANEL"
+                            }
+                          },
+                          "Property": "FULL_NAME"
+                        }
+                      },
+                      "Function": 2
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "fc32581337dc749b4dac": {
+            "singleVisual": {
+              "visualType": "image",
+              "objects": {}
+            }
+          }
+        }
+      }
+    },
+    "objects": {
+      "merge": {
+        "outspacePane": [
+          {
+            "properties": {
+              "expanded": {
+                "expr": {
+                  "Literal": {
+                    "Value": "true"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

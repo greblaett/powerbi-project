@@ -1,0 +1,354 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.3.0/schema.json",
+  "name": "8d81d04682704d787c62",
+  "position": {
+    "x": 9.23076923076923,
+    "y": 572.30769230769226,
+    "z": 5000,
+    "height": 140.76923076923077,
+    "width": 1260.7692307692307,
+    "tabOrder": 5000
+  },
+  "visual": {
+    "visualType": "waterfall6C9ED82ABD1F44C4A0D590CE01EB5EE7",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "V_IQVIA_REPORTING_PANEL"
+                            }
+                          },
+                          "Name": "Variation",
+                          "Property": "RECORD_DATE"
+                        }
+                      },
+                      "Hierarchy": "Datumshierarchie"
+                    }
+                  },
+                  "Level": "Jahr"
+                }
+              },
+              "queryRef": "V_IQVIA_REPORTING_PANEL.RECORD_DATE.Variation.Datumshierarchie.Jahr",
+              "nativeQueryRef": "RECORD_DATE Jahr1",
+              "active": true
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "V_IQVIA_REPORTING_PANEL"
+                            }
+                          },
+                          "Name": "Variation",
+                          "Property": "RECORD_DATE"
+                        }
+                      },
+                      "Hierarchy": "Datumshierarchie"
+                    }
+                  },
+                  "Level": "Monat"
+                }
+              },
+              "queryRef": "V_IQVIA_REPORTING_PANEL.RECORD_DATE.Variation.Datumshierarchie.Monat",
+              "nativeQueryRef": "RECORD_DATE Monat1",
+              "active": true
+            }
+          ]
+        },
+        "PreviousYear": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_IQVIA_REPORTING_PANEL"
+                    }
+                  },
+                  "Property": "KPI_PY"
+                }
+              },
+              "queryRef": "V_IQVIA_REPORTING_PANEL.KPI_PY",
+              "nativeQueryRef": "KPI_PY"
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_IQVIA_REPORTING_PANEL"
+                    }
+                  },
+                  "Property": "KPI"
+                }
+              },
+              "queryRef": "V_IQVIA_REPORTING_PANEL.KPI",
+              "nativeQueryRef": "KPI"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "visualCreatedVersion": [
+        {
+          "properties": {
+            "version": {
+              "expr": {
+                "Literal": {
+                  "Value": "'6.4.2'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "licenseSettings": [
+        {
+          "properties": {
+            "licenseKey": {
+              "expr": {
+                "Literal": {
+                  "Value": "'0LfjrjfakcVWdtzhZj+g+A8FtODnjUQz9HBT3p8a3ROtpGcqD7/2MP1XrDV/MJRFJB7buqIF15WXyEKmXtuWBXsiY29tcGFueSI6IkJpb21lZCBBRyIsImV4cGlyeURhdGUiOiIyMDI1LTA0LTA2Iiwibk9mVXNlcnMiOiIxIiwibGljZW5zZVR5cGUiOiJQYWlkIiwidmlzdWFsVHlwZSI6IkFsbCJ9'"
+                }
+              }
+            },
+            "lastLicenseCheck": {
+              "expr": {
+                "Literal": {
+                  "Value": "'2024-05-13T07:15:33.899Z'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "proFeaturesSettings": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "proFeaturesUnlocked": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "proFeaturesDisabledByUser": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "differenceHighlightSettings": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "chartType": [
+        {
+          "properties": {
+            "chartType": {
+              "expr": {
+                "Literal": {
+                  "Value": "3D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "titleSettings": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legendHeaderSettings": [
+        {
+          "properties": {
+            "actual-previousYear": {
+              "expr": {
+                "Literal": {
+                  "Value": "'ΔVJ'"
+                }
+              }
+            },
+            "actual": {
+              "expr": {
+                "Literal": {
+                  "Value": "'LJ'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Sales Entwicklung '"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Verdana'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "Filtera762d3f541be2c41313d",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "V_IQVIA_REPORTING_PANEL"
+                      }
+                    },
+                    "Name": "Variation",
+                    "Property": "RECORD_DATE"
+                  }
+                },
+                "Hierarchy": "Datumshierarchie"
+              }
+            },
+            "Level": "Jahr"
+          }
+        },
+        "type": "Advanced",
+        "isHiddenInViewMode": true
+      },
+      {
+        "name": "Filter323827c6bfedf6ebd31c",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "V_IQVIA_REPORTING_PANEL"
+                      }
+                    },
+                    "Name": "Variation",
+                    "Property": "RECORD_DATE"
+                  }
+                },
+                "Hierarchy": "Datumshierarchie"
+              }
+            },
+            "Level": "Monat"
+          }
+        },
+        "isHiddenInViewMode": true
+      },
+      {
+        "name": "Filter4d49c421007265c232c8",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_IQVIA_REPORTING_PANEL"
+              }
+            },
+            "Property": "KPI"
+          }
+        },
+        "type": "Advanced",
+        "isHiddenInViewMode": true
+      },
+      {
+        "name": "Filterebdd3ad422337c3c3357",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_IQVIA_REPORTING_PANEL"
+              }
+            },
+            "Property": "KPI_PY"
+          }
+        },
+        "type": "Advanced",
+        "isHiddenInViewMode": true
+      }
+    ]
+  }
+}

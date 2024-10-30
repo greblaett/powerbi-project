@@ -1,0 +1,35 @@
+table KPIs
+	lineageTag: 1706f069-3cac-4b6b-ab04-b209827a19bb
+
+	measure Selected_KPI = MIN(KPIs[KPI_ID])
+		formatString: 0
+		lineageTag: 79effb09-8e27-4b17-bb97-cf8b3b86a07e
+
+	column KPI
+		dataType: string
+		lineageTag: 867a5fcb-ecd2-4b16-969f-d3dc91b5be9f
+		summarizeBy: none
+		sourceColumn: KPI
+
+		annotation SummarizationSetBy = Automatic
+
+	column KPI_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 1fb9ec4c-4fc5-4784-b1d7-e3c5fa1e0ca5
+		summarizeBy: count
+		sourceColumn: KPI_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	partition KPIs = m
+		mode: import
+		source =
+				let
+				    Quelle = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WCk8tKlFwV9JRMlSK1YFyA4BcIzDXNzUvPRXIM1aKjQUA", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [KPI = _t, KPI_ID = _t]),
+				    #"Geänderter Typ" = Table.TransformColumnTypes(Quelle,{{"KPI", type text}, {"KPI_ID", Int64.Type}})
+				in
+				    #"Geänderter Typ"
+
+	annotation PBI_ResultType = Table
+

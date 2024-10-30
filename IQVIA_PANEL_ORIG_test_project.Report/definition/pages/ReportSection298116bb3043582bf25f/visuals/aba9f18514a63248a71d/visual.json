@@ -1,0 +1,538 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.3.0/schema.json",
+  "name": "aba9f18514a63248a71d",
+  "position": {
+    "x": 10.129870129870129,
+    "y": 229.87012987012986,
+    "z": 4000,
+    "height": 482.33766233766232,
+    "width": 769.87012987012986,
+    "tabOrder": 4000
+  },
+  "visual": {
+    "visualType": "ZebraBITablesBAE31B370F254F808553548EFB35BFA5",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_IQVIA_REPORTING_PANEL"
+                    }
+                  },
+                  "Property": "DISTRIBUTOR"
+                }
+              },
+              "queryRef": "V_IQVIA_REPORTING_PANEL.DISTRIBUTOR",
+              "nativeQueryRef": "DISTRIBUTOR",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_IQVIA_REPORTING_PANEL"
+                    }
+                  },
+                  "Property": "PRODUCT_DESCRIPTION"
+                }
+              },
+              "queryRef": "V_IQVIA_REPORTING_PANEL.PRODUCT_DESCRIPTION",
+              "nativeQueryRef": "PRODUCT_DESCRIPTION",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_IQVIA_REPORTING_PANEL"
+                    }
+                  },
+                  "Property": "FULL_NAME"
+                }
+              },
+              "queryRef": "V_IQVIA_REPORTING_PANEL.FULL_NAME",
+              "nativeQueryRef": "FULL_NAME",
+              "active": true
+            }
+          ]
+        },
+        "PreviousYear": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_IQVIA_REPORTING_PANEL"
+                    }
+                  },
+                  "Property": "KPI_PY"
+                }
+              },
+              "queryRef": "V_IQVIA_REPORTING_PANEL.KPI_PY",
+              "nativeQueryRef": "KPI_PY"
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_IQVIA_REPORTING_PANEL"
+                    }
+                  },
+                  "Property": "KPI"
+                }
+              },
+              "queryRef": "V_IQVIA_REPORTING_PANEL.KPI",
+              "nativeQueryRef": "KPI1"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_IQVIA_REPORTING_PANEL"
+                    }
+                  },
+                  "Property": "KPI_2PY"
+                }
+              },
+              "queryRef": "V_IQVIA_REPORTING_PANEL.KPI_2PY",
+              "nativeQueryRef": "KPI_2PY"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "V_IQVIA_REPORTING_PANEL"
+                  }
+                },
+                "Property": "KPI"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "version": [
+        {
+          "properties": {
+            "version": {
+              "expr": {
+                "Literal": {
+                  "Value": "'7.3.0'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "chartSettings": [
+        {
+          "properties": {
+            "columnSettings": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\"actual\":{\"invert\":false,\"order\":9,\"scaleGroup\":1,\"format\":0,\"useMeasureName\":false,\"pbiFormatString\":\"#,0\",\"suppressOthers\":false,\"tableView\":{\"bold\":false,\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":false,\"hiddenFromGroups\":[]},\"chartView\":{\"bold\":false,\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":false,\"hiddenFromGroups\":[]}},\"previousYear\":{\"invert\":false,\"order\":6,\"scaleGroup\":1,\"format\":0,\"useMeasureName\":false,\"pbiFormatString\":\"#,0\",\"suppressOthers\":false,\"tableView\":{\"bold\":false,\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":false,\"hiddenFromGroups\":[]},\"chartView\":{\"bold\":false,\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":false,\"hiddenFromGroups\":[]}},\"actual-previousYear\":{\"invert\":false,\"order\":10,\"scaleGroup\":1,\"format\":1,\"useMeasureName\":false,\"pbiFormatString\":\"#,0\",\"suppressOthers\":false,\"tableView\":{\"bold\":false,\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":false,\"hiddenFromGroups\":[]},\"chartView\":{\"bold\":false,\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":false,\"hiddenFromGroups\":[]}},\"actual-previousYear-percent\":{\"invert\":false,\"order\":11,\"scaleGroup\":1,\"format\":2,\"useMeasureName\":false,\"pbiFormatString\":\"#,0\",\"suppressOthers\":false,\"tableView\":{\"bold\":false,\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":false,\"hiddenFromGroups\":[]},\"chartView\":{\"bold\":false,\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":1,\"hidden\":false,\"hiddenFromGroups\":[]}},\"KPI_2PY\":{\"header\":\"Sales VVJ\",\"invert\":false,\"format\":0,\"useMeasureName\":false,\"pbiFormatString\":\"#,0\",\"percentageFormat\":\"\",\"showPercentageInLabel\":1,\"scaleGroup\":-1,\"suppressOthers\":false,\"tableView\":{\"bold\":false,\"decimalPlaces\":-1,\"displayUnits\":\"Default\",\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":true,\"valueChart\":0,\"absoluteChart\":0,\"hiddenFromGroups\":[],\"columnFixedWidth\":200},\"chartView\":{\"bold\":false,\"decimalPlaces\":-1,\"displayUnits\":\"Default\",\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":false,\"valueChart\":0,\"absoluteChart\":0,\"hiddenFromGroups\":[],\"columnFixedWidth\":200}},\"ATC_L4\":{\"header\":\"ATC_L4\",\"invert\":false,\"format\":5,\"percentageFormat\":\"\",\"showPercentageInLabel\":1,\"scaleGroup\":-1,\"suppressOthers\":false,\"tableView\":{\"bold\":false,\"decimalPlaces\":-1,\"displayUnits\":\"Default\",\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":false,\"valueChart\":0,\"absoluteChart\":0,\"hiddenFromGroups\":[],\"columnFixedWidth\":200},\"chartView\":{\"bold\":false,\"decimalPlaces\":-1,\"displayUnits\":\"Default\",\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":true,\"valueChart\":0,\"absoluteChart\":0,\"hiddenFromGroups\":[],\"columnFixedWidth\":200}},\"KPI_EI\":{\"header\":\"EI\",\"invert\":false,\"order\":12,\"format\":0,\"percentageFormat\":\"\",\"showPercentageInLabel\":1,\"scaleGroup\":-1,\"suppressOthers\":false,\"tableView\":{\"bold\":false,\"decimalPlaces\":-1,\"displayUnits\":\"Default\",\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":false,\"valueChart\":0,\"absoluteChart\":0,\"hiddenFromGroups\":[]},\"chartView\":{\"bold\":false,\"decimalPlaces\":-1,\"displayUnits\":\"Default\",\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":false,\"valueChart\":0,\"absoluteChart\":0,\"hiddenFromGroups\":[]}},\"KPI_MA\":{\"header\":\"MA%\",\"invert\":false,\"order\":13,\"format\":0,\"percentageFormat\":\"\",\"showPercentageInLabel\":1,\"scaleGroup\":-1,\"suppressOthers\":false,\"tableView\":{\"bold\":false,\"decimalPlaces\":-1,\"displayUnits\":\"Default\",\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":false,\"valueChart\":0,\"absoluteChart\":0,\"hiddenFromGroups\":[]},\"chartView\":{\"bold\":false,\"decimalPlaces\":-1,\"displayUnits\":\"Default\",\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":false,\"valueChart\":0,\"absoluteChart\":0,\"hiddenFromGroups\":[]}},\"NFC\":{\"header\":\"NFC\",\"invert\":false,\"order\":0,\"format\":5,\"percentageFormat\":\"\",\"showPercentageInLabel\":1,\"scaleGroup\":-1,\"suppressOthers\":false,\"tableView\":{\"bold\":false,\"decimalPlaces\":-1,\"displayUnits\":\"Default\",\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":false,\"valueChart\":0,\"absoluteChart\":0,\"hiddenFromGroups\":[],\"columnFixedWidth\":200},\"chartView\":{\"bold\":false,\"decimalPlaces\":-1,\"displayUnits\":\"Default\",\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":true,\"valueChart\":0,\"absoluteChart\":0,\"hiddenFromGroups\":[],\"columnFixedWidth\":200}},\"Packungsgrösse\":{\"header\":\"Packungsgrösse\",\"invert\":false,\"order\":1,\"format\":5,\"percentageFormat\":\"\",\"showPercentageInLabel\":1,\"scaleGroup\":-1,\"suppressOthers\":false,\"tableView\":{\"bold\":false,\"decimalPlaces\":-1,\"displayUnits\":\"Default\",\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":false,\"valueChart\":0,\"absoluteChart\":0,\"hiddenFromGroups\":[],\"columnFixedWidth\":200},\"chartView\":{\"bold\":false,\"decimalPlaces\":-1,\"displayUnits\":\"Default\",\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":true,\"valueChart\":0,\"absoluteChart\":0,\"hiddenFromGroups\":[],\"columnFixedWidth\":200}},\"Swissmedic\":{\"header\":\"Swissmedic\",\"invert\":false,\"order\":3,\"format\":5,\"percentageFormat\":\"\",\"showPercentageInLabel\":1,\"scaleGroup\":-1,\"suppressOthers\":false,\"tableView\":{\"bold\":false,\"decimalPlaces\":-1,\"displayUnits\":\"Default\",\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":false,\"valueChart\":0,\"absoluteChart\":0,\"hiddenFromGroups\":[],\"columnFixedWidth\":200},\"chartView\":{\"bold\":false,\"decimalPlaces\":-1,\"displayUnits\":\"Default\",\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":true,\"valueChart\":0,\"absoluteChart\":0,\"hiddenFromGroups\":[],\"columnFixedWidth\":200}},\"Handelsform\":{\"header\":\"Handelsform\",\"invert\":false,\"order\":4,\"format\":5,\"percentageFormat\":\"\",\"showPercentageInLabel\":1,\"scaleGroup\":-1,\"suppressOthers\":false,\"tableView\":{\"bold\":false,\"decimalPlaces\":-1,\"displayUnits\":\"Default\",\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":false,\"valueChart\":0,\"absoluteChart\":0,\"hiddenFromGroups\":[],\"columnFixedWidth\":200},\"chartView\":{\"bold\":false,\"decimalPlaces\":-1,\"displayUnits\":\"Default\",\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":true,\"valueChart\":0,\"absoluteChart\":0,\"hiddenFromGroups\":[],\"columnFixedWidth\":200}},\"Kassencode\":{\"header\":\"Kassencode\",\"invert\":false,\"order\":7,\"format\":5,\"percentageFormat\":\"\",\"showPercentageInLabel\":1,\"scaleGroup\":-1,\"suppressOthers\":false,\"tableView\":{\"bold\":false,\"decimalPlaces\":-1,\"displayUnits\":\"Default\",\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":false,\"valueChart\":0,\"absoluteChart\":0,\"hiddenFromGroups\":[],\"columnFixedWidth\":200},\"chartView\":{\"bold\":false,\"decimalPlaces\":-1,\"displayUnits\":\"Default\",\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":true,\"valueChart\":0,\"absoluteChart\":0,\"hiddenFromGroups\":[],\"columnFixedWidth\":200}},\"SALES_REGION\":{\"header\":\"SALES_REGION\",\"invert\":false,\"order\":8,\"format\":5,\"percentageFormat\":\"\",\"showPercentageInLabel\":1,\"scaleGroup\":-1,\"suppressOthers\":false,\"tableView\":{\"bold\":false,\"decimalPlaces\":-1,\"displayUnits\":\"Default\",\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":false,\"valueChart\":0,\"absoluteChart\":0,\"hiddenFromGroups\":[],\"columnFixedWidth\":200},\"chartView\":{\"bold\":false,\"decimalPlaces\":-1,\"displayUnits\":\"Default\",\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":true,\"valueChart\":0,\"absoluteChart\":0,\"hiddenFromGroups\":[],\"columnFixedWidth\":200}},\"KASSENCODE\":{\"header\":\"KASSENCODE\",\"invert\":false,\"order\":5,\"format\":5,\"percentageFormat\":\"\",\"showPercentageInLabel\":1,\"scaleGroup\":-1,\"suppressOthers\":false,\"tableView\":{\"bold\":false,\"decimalPlaces\":-1,\"displayUnits\":\"Default\",\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":false,\"valueChart\":0,\"absoluteChart\":0,\"hiddenFromGroups\":[],\"columnFixedWidth\":200},\"chartView\":{\"bold\":false,\"decimalPlaces\":-1,\"displayUnits\":\"Default\",\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":false,\"valueChart\":0,\"absoluteChart\":0,\"hiddenFromGroups\":[],\"columnFixedWidth\":200}},\"SWISSMEDIC\":{\"header\":\"SWISSMEDIC\",\"invert\":false,\"order\":2,\"format\":5,\"percentageFormat\":\"\",\"showPercentageInLabel\":1,\"scaleGroup\":-1,\"suppressOthers\":false,\"tableView\":{\"bold\":false,\"decimalPlaces\":-1,\"displayUnits\":\"Default\",\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":false,\"valueChart\":0,\"absoluteChart\":0,\"hiddenFromGroups\":[],\"columnFixedWidth\":200},\"chartView\":{\"bold\":false,\"decimalPlaces\":-1,\"displayUnits\":\"Default\",\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":false,\"valueChart\":0,\"absoluteChart\":0,\"hiddenFromGroups\":[],\"columnFixedWidth\":200}},\"MAT_EI\":{\"header\":\"EI\",\"invert\":false,\"format\":0,\"percentageFormat\":\"\",\"showPercentageInLabel\":1,\"scaleGroup\":-1,\"suppressOthers\":false,\"tableView\":{\"bold\":false,\"decimalPlaces\":-1,\"displayUnits\":\"Default\",\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":false,\"valueChart\":0,\"absoluteChart\":0,\"hiddenFromGroups\":[]},\"chartView\":{\"bold\":false,\"decimalPlaces\":2,\"displayUnits\":\"Default\",\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":0,\"border\":\"\",\"showAsTable\":0,\"hidden\":false,\"valueChart\":0,\"absoluteChart\":0,\"hiddenFromGroups\":[]},\"order\":null},\"MAT_SP_MA\":{\"header\":\"MA\",\"invert\":false,\"format\":0,\"percentageFormat\":\"\",\"showPercentageInLabel\":1,\"scaleGroup\":-1,\"suppressOthers\":false,\"tableView\":{\"bold\":false,\"decimalPlaces\":-1,\"displayUnits\":\"Default\",\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":5,\"border\":\"\",\"showAsTable\":0,\"hidden\":false,\"valueChart\":0,\"absoluteChart\":0,\"hiddenFromGroups\":[]},\"chartView\":{\"bold\":false,\"decimalPlaces\":-1,\"displayUnits\":\"Default\",\"textColor\":\"\",\"backgroundFill\":\"\",\"markerStyle\":0,\"border\":\"\",\"showAsTable\":0,\"hidden\":false,\"valueChart\":0,\"absoluteChart\":0,\"hiddenFromGroups\":[]},\"order\":null}}'"
+                }
+              }
+            },
+            "showMajorGridlines": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showGridlines": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showAsTable": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "suppressZeros": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "suppressNulls": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "types": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Actual / Absolute / Relative'"
+                }
+              }
+            },
+            "showGridlinesTable": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "firstTimeShowingColumnAdder": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categoriesMetadata": [
+        {
+          "properties": {
+            "collapsedVirtually": {
+              "expr": {
+                "Literal": {
+                  "Value": "'[\"01A4 HUSTENLÖSER SELBSTDEFINIERT IBSA Inst.Biochim. Solmucalm Erkhust\",\"01A4 HUSTENLÖSER SELBSTDEFINIERT IBSA Inst.Biochim. Solmucol Erkhust\",\"01A4 HUSTENLÖSER SELBSTDEFINIERT IBSA Inst.Biochim. Solmucol\",\"01A4 HUSTENLÖSER SELBSTDEFINIERT Opella Healthcare Sw Bisolvon Phyto Complet\",\"01A4 HUSTENLÖSER SELBSTDEFINIERT Opella Healthcare Sw Bisolvon\",\"01A4 HUSTENLÖSER SELBSTDEFINIERT Opella Healthcare Sw Bisolvon Dual\",\"01A4 HUSTENLÖSER SELBSTDEFINIERT Opella Healthcare Sw Bisolvon Ambroxol\",\"01A4 HUSTENLÖSER SELBSTDEFINIERT Opella Healthcare Sw Mucosolvon Retard\",\"01A4 HUSTENLÖSER SELBSTDEFINIERT Opella Healthcare Sw Rhinathiol\",\"01A4 HUSTENLÖSER SELBSTDEFINIERT Opella Healthcare Sw Mucosolvon\",\"01A4 HUSTENLÖSER SELBSTDEFINIERT Schwabe Pharma Umckaloabo\",\"01A4 HUSTENLÖSER SELBSTDEFINIERT Schwabe Pharma Kaloba\",\"01A4 HUSTENLÖSER SELBSTDEFINIERT Zeller Max Soehne Prospan\",\"01A4 HUSTENLÖSER SELBSTDEFINIERT Zeller Max Soehne Prospanex\",\"01A4 HUSTENLÖSER SELBSTDEFINIERT Zambon Fluimucil Erkhust\",\"01A4 HUSTENLÖSER SELBSTDEFINIERT Zambon Fluimucil\",\"01A4 HUSTENLÖSER SELBSTDEFINIERT A.Vogel Santasapina\",\"01A4 HUSTENLÖSER SELBSTDEFINIERT A.Vogel Drosinula\",\"01A4 HUSTENLÖSER SELBSTDEFINIERT A.Vogel Bronchosan\",\"01A4 HUSTENLÖSER SELBSTDEFINIERT A.Vogel Plantago\",\"01A4 HUSTENLÖSER SELBSTDEFINIERT A.Vogel Vogel Husten\",\"01A4 HUSTENLÖSER SELBSTDEFINIERT Sandoz Acc Sandoz\",\"01A4 HUSTENLÖSER SELBSTDEFINIERT Sandoz Ecomucyl Sandoz\",\"01A4 HUSTENLÖSER SELBSTDEFINIERT Sandoz Sanabronch\",\"01A4 HUSTENLÖSER SELBSTDEFINIERT Alpinamed Gelomyrtol\",\"01A4 HUSTENLÖSER SELBSTDEFINIERT Weleda Weleda Husten.\",\"01A4 HUSTENLÖSER SELBSTDEFINIERT Zeller Max Soehne Angocin\",\"01A4 HUSTENLÖSER SELBSTDEFINIERT Biomed Sinupret\",\"BIOMED - TOTAL Zambon\",\"BIOMED - TOTAL Biomed Sinupret\",\"BIOMED - TOTAL Biomed Parapic\",\"BIOMED - TOTAL Biomed Magnesium Biom Uno\",\"BIOMED - TOTAL Biomed Biotin Biomed\",\"BIOMED - TOTAL Biomed Bronchipret\",\"BIOMED - TOTAL Biomed Zink Biomed 20\",\"BIOMED - TOTAL Biomed Magnesium Biom Direct\",\"BIOMED - TOTAL Biomed Deumavan\",\"BIOMED - TOTAL Biomed Blattgruen 1001\",\"BIOMED - TOTAL Biomed Traumaplant\",\"BIOMED - TOTAL Biomed InShape Biomed\",\"BIOMED - TOTAL Biomed Zink Biomed\",\"BIOMED - TOTAL Biomed Magnesium Biomed\",\"BIOMED - TOTAL Biomed Magnesium Biom Activ\",\"BIOMED - TOTAL Biomed Immun Biomed\",\"BIOMED - TOTAL Biomed Sensicutan\",\"BIOMED - TOTAL Biomed Canephron\",\"BIOMED - TOTAL Biomed Eisen Biomed\",\"BIOMED - TOTAL Biomed Protefix\",\"BIOMED - TOTAL Biomed Reduforte Biomed\",\"BIOMED - TOTAL Biomed Allsan Mariendistel\",\"BIOMED - TOTAL Biomed Allsan pH\",\"BIOMED - TOTAL Biomed AppControl\",\"BIOMED - TOTAL Biomed Gynenov\",\"BIOMED - TOTAL Biomed Allsan Leinoel\",\"BIOMED - TOTAL Biomed Magnesium Biom Pur\",\"BIOMED - TOTAL Biomed Allsan Basen Min.Salz\",\"BIOMED - TOTAL Biomed MicroClave\",\"BIOMED - TOTAL Biomed Pro-Symbioflor\",\"BIOMED - TOTAL Biomed SYMBIOdetox\",\"BIOMED - TOTAL Biomed Utipro\",\"BIOMED - TOTAL Biomed Symbiolact BMD\",\"BIOMED - TOTAL Biomed Butterfly\",\"BIOMED - TOTAL Biomed Symbiointest BMD\",\"BIOMED - TOTAL Biomed Symbioflor BMD\",\"BIOMED - TOTAL Biomed Biomed Pillenbox\",\"BIOMED - TOTAL Biomed Biomed\",\"BIOMED - TOTAL Biomed SymbioPro\",\"BIOMED - TOTAL Biomed Allsan Zimachrom\",\"BIOMED - TOTAL Biomed Appecal Biomed\",\"BIOMED - TOTAL Biomed Carbosinol Biomed\",\"BIOMED - TOTAL Biomed FatControl Biomed\",\"BIOMED - TOTAL Biomed Liposinol Biomed\",\"BIOMED - TOTAL Biomed Allsan Pro Cell\",\"BIOMED - TOTAL Biomed Hydro Santa Biomed\",\"BIOMED - TOTAL Biomed Zink Verla\",\"BIOMED - TOTAL Zambon Perenterol\",\"04F3  MAGNESIUMPRAEPARATE Biomed Magnesium Biom Direct\",\"04F3  MAGNESIUMPRAEPARATE Biomed Magnesium Biom Activ\",\"04F3  MAGNESIUMPRAEPARATE Biomed Magnesium Biom Pur\",\"04F3  MAGNESIUMPRAEPARATE Doetsch Grether Magnesium-Diasporal\",\"04F3  MAGNESIUMPRAEPARATE Doetsch Grether Vita Mg 300 Plus\",\"04F3  MAGNESIUMPRAEPARATE Doetsch Grether Vita Mag 375\",\"04F3  MAGNESIUMPRAEPARATE Doetsch Grether Magnesium Activ\",\"04F3  MAGNESIUMPRAEPARATE Verfora Veractiv Magnesium\",\"04F3  MAGNESIUMPRAEPARATE Verfora Magnesium Vital\",\"04F3  MAGNESIUMPRAEPARATE Verfora metacare\",\"04F3  MAGNESIUMPRAEPARATE Verfora Demovit Magnes.300\",\"04F3  MAGNESIUMPRAEPARATE Verfora Meta Care\",\"04F3  MAGNESIUMPRAEPARATE Ebi-Pharm Burgerstein Mag.Vital\",\"04F3  MAGNESIUMPRAEPARATE Ebi-Pharm Burgerstein Mag.Orot\",\"04F3  MAGNESIUMPRAEPARATE OM Pharma Mg5-Oraleff\",\"04F3  MAGNESIUMPRAEPARATE OM Pharma Mg5-Granoral\",\"04F3  MAGNESIUMPRAEPARATE OM Pharma Mg5-Longoral\",\"04F3  MAGNESIUMPRAEPARATE Sandoz Magnesium Sandoz\",\"04F3  MAGNESIUMPRAEPARATE Pierre Fabre Pharm Solmag\",\"04F3  MAGNESIUMPRAEPARATE Phytolis Formag\",\"04F3  MAGNESIUMPRAEPARATE Phytolis Astemag\",\"04F3  MAGNESIUMPRAEPARATE Phytolis Mg Biane\",\"04F3  MAGNESIUMPRAEPARATE Andreabal Andreamag\",\"04F3  MAGNESIUMPRAEPARATE Nestlé Pure Magnesium\",\"Biomed Riopan\",\"Biomed Sinupret\",\"Biomed Biotin Biomed\",\"Biomed Parapic\",\"Biomed Zink Biomed 20\",\"Biomed Bronchipret\",\"Biomed Canephron\",\"Biomed Traumaplant\",\"Biomed Sensicutan\",\"Biomed Allsan Mariendistel\",\"Biomed Magnesium Biomed\"]'"
+                }
+              }
+            },
+            "userChangedExpandCollapse": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "categoryFormatSettings": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\"Biomed\":{\"isBold\":false,\"isItalic\":false,\"textColor\":\"\",\"highlightColor\":\"\",\"topBorder\":false,\"rowBackgroundColor\":\"#94B3DB4D\"}}'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "licenseSettings": [
+        {
+          "properties": {
+            "licenseKey": {
+              "expr": {
+                "Literal": {
+                  "Value": "'0LfjrjfakcVWdtzhZj+g+A8FtODnjUQz9HBT3p8a3ROtpGcqD7/2MP1XrDV/MJRFJB7buqIF15WXyEKmXtuWBXsiY29tcGFueSI6IkJpb21lZCBBRyIsImV4cGlyeURhdGUiOiIyMDI1LTA0LTA2Iiwibk9mVXNlcnMiOiIxIiwibGljZW5zZVR5cGUiOiJQYWlkIiwidmlzdWFsVHlwZSI6IkFsbCJ9'"
+                }
+              }
+            },
+            "lastLicenseCheck": {
+              "expr": {
+                "Literal": {
+                  "Value": "'2024-10-30T16:38:44.292Z'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "proFeaturesSettings": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "proFeaturesUnlocked": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "proFeaturesDisabledByUser": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "titleSettings": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dataLabelSettings": [
+        {
+          "properties": {
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Verdana'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            },
+            "units": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Auto'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categorySettings": [
+        {
+          "properties": {
+            "freeze": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showTopNForm": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "displayOptions": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "topNSettings": {
+              "expr": {
+                "Literal": {
+                  "Value": "'[{\"category\":\"DISTRIBUTOR\",\"dataProperty\":0,\"columnName\":\"actual\",\"level\":0,\"number\":5,\"numberInFocusMode\":20,\"type\":0},{\"category\":\"PRODUCT_DESCRIPTION\",\"dataProperty\":0,\"columnName\":\"actual\",\"level\":1,\"number\":10,\"numberInFocusMode\":20,\"type\":0}]'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "sortSettings": [
+        {
+          "properties": {
+            "columnName": {
+              "expr": {
+                "Literal": {
+                  "Value": "'actual'"
+                }
+              }
+            },
+            "chartSort": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "categorySort": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legendHeaderSettings": [
+        {
+          "properties": {
+            "previousYear": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Sales VJ'"
+                }
+              }
+            },
+            "actual": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Sales LJ'"
+                }
+              }
+            },
+            "actual-previousYear": {
+              "expr": {
+                "Literal": {
+                  "Value": "'ΔLJ vs. VJ'"
+                }
+              }
+            },
+            "actual-previousYear-percent": {
+              "expr": {
+                "Literal": {
+                  "Value": "'ΔVJ%'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "Filterdd551dd78a85800382c9",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_IQVIA_REPORTING_PANEL"
+              }
+            },
+            "Property": "KPI_PY"
+          }
+        },
+        "type": "Advanced",
+        "isHiddenInViewMode": true
+      },
+      {
+        "name": "Filter5e8bb2c42999af002b4a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_IQVIA_REPORTING_PANEL"
+              }
+            },
+            "Property": "KPI"
+          }
+        },
+        "type": "Advanced",
+        "isHiddenInViewMode": true
+      },
+      {
+        "name": "Filter97ae00d11283a85373db",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_IQVIA_REPORTING_PANEL"
+              }
+            },
+            "Property": "KPI_EI"
+          }
+        },
+        "type": "Advanced",
+        "howCreated": "User",
+        "isHiddenInViewMode": true
+      },
+      {
+        "name": "Filtere1eb279e76deadc5f4c2",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_IQVIA_REPORTING_PANEL"
+              }
+            },
+            "Property": "KPI_MA"
+          }
+        },
+        "type": "Advanced",
+        "howCreated": "User",
+        "isHiddenInViewMode": true
+      },
+      {
+        "name": "Filter806e9f8b705d853e852b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_IQVIA_REPORTING_PANEL"
+              }
+            },
+            "Property": "DISTRIBUTOR"
+          }
+        },
+        "isHiddenInViewMode": true
+      },
+      {
+        "name": "Filter310177adcd78e3f42d0c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_IQVIA_REPORTING_PANEL"
+              }
+            },
+            "Property": "PRODUCT_DESCRIPTION"
+          }
+        },
+        "isHiddenInViewMode": true
+      },
+      {
+        "name": "Filter69219d207b9f63625655",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_IQVIA_REPORTING_PANEL"
+              }
+            },
+            "Property": "FULL_NAME"
+          }
+        },
+        "isHiddenInViewMode": true
+      }
+    ]
+  }
+}

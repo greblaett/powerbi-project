@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "IQVIA_PANEL_ORIG_test_project"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "3f15aae9-1a91-4890-bf9a-4925800fd00e"
+  }
+}

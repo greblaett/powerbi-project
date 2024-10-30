@@ -1,0 +1,634 @@
+table V_IQVIA_REPORTING_PANEL
+	lineageTag: 608d3f1a-d918-4642-bb3e-be39ea9df7f4
+
+	measure Selected_Value =
+			
+			SWITCH([Selected_KPI],
+			1, SUM(V_IQVIA_REPORTING_PANEL[EX_FACTORY_VALUE]),
+			2, SUM(V_IQVIA_REPORTING_PANEL[PUBLIC_VALUE]),
+			3, SUM(V_IQVIA_REPORTING_PANEL[RECORD_QUANTITY]))
+		formatString: 0
+		displayFolder: Kennzahlen\Hilfskennzahlen
+		lineageTag: 53d9a69a-e42d-439e-b0d8-f05e58a85361
+
+	measure KPI =
+			
+			SWITCH([Selected_Period],
+			1, [Selected_Value],
+			2, TOTALYTD([Selected_Value],V_IQVIA_REPORTING_PANEL[RECORD_DATE].[Date]),
+			3, CALCULATE([Selected_Value], DATESINPERIOD(V_IQVIA_REPORTING_PANEL[RECORD_DATE].[Date], LASTDATE(V_IQVIA_REPORTING_PANEL[RECORD_DATE].[Date]),-1,YEAR)))
+		formatString: #,0
+		displayFolder: Kennzahlen\KPI
+		lineageTag: 3a65bd7c-5db5-4a24-aea9-cb456511c9cc
+
+	measure KPI_PY = CALCULATE([KPI], DATEADD(V_IQVIA_REPORTING_PANEL[RECORD_DATE].[Date],-1, YEAR))
+		formatString: #,0
+		displayFolder: Kennzahlen\KPI
+		lineageTag: bc87ba00-a098-405c-9094-e99f75550192
+
+	measure KPI_GROWTH = [KPI]/[KPI_PY]-1
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Kennzahlen\KPI
+		lineageTag: fc3e8599-cf91-435e-9f9b-0e5ed54c9e9e
+
+	measure KPI_MA = ```
+			
+			DIVIDE( 
+			    [KPI] , 
+			    CALCULATE( [KPI] , 
+			       ALLSELECTED()  ),
+			0)
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Kennzahlen\KPI
+		lineageTag: 7c1f43b6-cfe5-487e-9b32-424a1792aa88
+
+	measure KPI_EI = DIVIDE(100+[KPI_GROWTH]*100,CALCULATE(100+[KPI_GROWTH]*100,ALLSELECTED()))*100
+		displayFolder: Kennzahlen\KPI
+		lineageTag: bebe20f2-20ba-4baf-96c0-23a2be4fa498
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure KPI_MA_Month = ```
+			
+			DIVIDE( 
+			    [KPI] , 
+			    CALCULATE( [KPI] , 
+			       ALLSELECTED(V_IQVIA_REPORTING_PANEL[RECORD_DATE], V_IQVIA_REPORTING_PANEL[DISTRIBUTOR], V_IQVIA_REPORTING_PANEL[DISTRIBUTOR (Gruppen)])  ),
+			0)*100
+			```
+		displayFolder: Kennzahlen\KPI
+		lineageTag: f2f446ea-97a8-4b4c-b3a0-43af167990ab
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure KPI_EI_Month = DIVIDE(100+[KPI_GROWTH]*100,CALCULATE(100+[KPI_GROWTH]*100,ALLSELECTED(V_IQVIA_REPORTING_PANEL[RECORD_DATE], V_IQVIA_REPORTING_PANEL[DISTRIBUTOR])))*100
+		displayFolder: Kennzahlen\KPI
+		lineageTag: c124d5e1-7221-4825-b550-5e358c39e8b9
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure KPI_MA_Month_PRD = ```
+			
+			DIVIDE( 
+			    [KPI] , 
+			    CALCULATE( [KPI] , 
+			       ALLSELECTED(V_IQVIA_REPORTING_PANEL[RECORD_DATE], V_IQVIA_REPORTING_PANEL[PRODUCT_DESCRIPTION], V_IQVIA_REPORTING_PANEL[FULL_NAME])  ),
+			0)*100
+			```
+		displayFolder: Kennzahlen\KPI
+		lineageTag: 7a800641-16a6-401e-9164-ffc83acccc3e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure KPI_EI_Month_PRD = DIVIDE(100+[KPI_GROWTH]*100,CALCULATE(100+[KPI_GROWTH]*100,ALLSELECTED(V_IQVIA_REPORTING_PANEL[RECORD_DATE], V_IQVIA_REPORTING_PANEL[PRODUCT_DESCRIPTION], V_IQVIA_REPORTING_PANEL[FULL_NAME])))*100
+		displayFolder: Kennzahlen\KPI
+		lineageTag: 261c5ed6-d9ae-4e4f-9730-ea2bdbbaa961
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure KPI_2PY = CALCULATE([KPI], DATEADD(V_IQVIA_REPORTING_PANEL[RECORD_DATE].[Date],-2, YEAR))
+		formatString: 0
+		displayFolder: Kennzahlen\KPI
+		lineageTag: d3ab5346-0f4f-4252-a58a-941838bcd436
+
+	measure 'Delta VVJ' = [KPI] - [KPI_2PY]
+		formatString: 0
+		displayFolder: Kennzahlen\KPI
+		lineageTag: b0216e52-b6e8-40f3-b9a5-4e55bd61edd4
+
+	measure VVJ_GROWTH = [KPI]/[KPI_2PY]-1
+		displayFolder: Kennzahlen\KPI
+		lineageTag: 69e84302-81e4-498f-94a3-6fc1a8a1972c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column RECORD_DATE
+		dataType: dateTime
+		formatString: Long Date
+		displayFolder: Time
+		lineageTag: 80afdbc2-419b-4ba5-89d8-82959b3056b1
+		summarizeBy: none
+		sourceColumn: RECORD_DATE
+
+		variation Variation
+			isDefault
+			relationship: 3a84ba5f-c5e7-40e1-aae2-7c2450cf8586
+			defaultHierarchy: LocalDateTable_f78eee8d-4d6f-4b0a-933a-f475f99704f4.Datumshierarchie
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column MONTH
+		dataType: int64
+		formatString: 0
+		displayFolder: Time
+		lineageTag: d10ef6da-36ab-419d-9681-f3a3f59c18df
+		summarizeBy: sum
+		sourceColumn: MONTH
+
+		annotation SummarizationSetBy = Automatic
+
+	column YEAR
+		dataType: int64
+		formatString: 0
+		displayFolder: Time
+		lineageTag: 1a4774db-2b96-42c6-860e-3d8c82d6efc6
+		summarizeBy: sum
+		sourceColumn: YEAR
+
+		annotation SummarizationSetBy = Automatic
+
+	column CHANEL_CODE
+		dataType: string
+		displayFolder: Kanal
+		lineageTag: 0b890e9d-4f98-4080-b614-1b858db54c3a
+		summarizeBy: none
+		sourceColumn: CHANEL_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation __PBI_SemanticLinks = [{"LinkTarget":{"TableName":"V_IQVIA_REPORTING_PANEL","TableItemName":"CHANEL_CODE (Gruppen)","ObjectType":4},"LinkType":"UsedInGroup"}]
+
+	column REGION
+		dataType: string
+		displayFolder: Region
+		lineageTag: 5d8752ca-9264-4ea0-af42-4be811460267
+		summarizeBy: none
+		sourceColumn: REGION
+
+		annotation SummarizationSetBy = Automatic
+
+	column COUNTRY
+		dataType: string
+		displayFolder: Region
+		lineageTag: 1c1d4807-2196-483e-9774-e2e586f0b3bc
+		summarizeBy: none
+		sourceColumn: COUNTRY
+
+		annotation SummarizationSetBy = Automatic
+
+	column RECORD_QUANTITY
+		dataType: int64
+		formatString: 0
+		displayFolder: Kennzahlen\IQVIA
+		lineageTag: 798d97bd-c3ae-43ae-8f76-7135e35e84e8
+		summarizeBy: sum
+		sourceColumn: RECORD_QUANTITY
+
+		annotation SummarizationSetBy = Automatic
+
+	column EX_FACTORY_VALUE
+		dataType: int64
+		formatString: 0
+		displayFolder: Kennzahlen\IQVIA
+		lineageTag: d3e741b1-6f94-440c-96ed-4c80a8f61aac
+		summarizeBy: sum
+		sourceColumn: EX_FACTORY_VALUE
+
+		annotation SummarizationSetBy = Automatic
+
+	column PUBLIC_VALUE
+		dataType: int64
+		formatString: 0
+		displayFolder: Kennzahlen\IQVIA
+		lineageTag: a21e5b1f-7b9f-41b5-babe-cd0ea7ab7187
+		summarizeBy: sum
+		sourceColumn: PUBLIC_VALUE
+
+		annotation SummarizationSetBy = Automatic
+
+	column COUNTING_UNIT
+		dataType: double
+		displayFolder: Produkt
+		lineageTag: d8180b63-2fb3-4961-ba23-453b17912a5f
+		summarizeBy: sum
+		sourceColumn: COUNTING_UNIT
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PHARMACODE
+		dataType: string
+		displayFolder: Produkt
+		lineageTag: 1ef19167-1dee-4590-8a02-e07d6a791758
+		summarizeBy: none
+		sourceColumn: PHARMACODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column EAN_CODE
+		dataType: string
+		displayFolder: Produkt
+		lineageTag: 61b73779-f981-46a1-8bc2-e8761f9f77d3
+		summarizeBy: none
+		sourceColumn: EAN_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column FULL_NAME
+		dataType: string
+		displayFolder: Produkt
+		lineageTag: 8550e97c-e3dd-40ae-9ddf-0c6333e18543
+		summarizeBy: none
+		sourceColumn: FULL_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column CONCATENATED_MOLECULE
+		dataType: string
+		displayFolder: Produkt
+		lineageTag: e05bde50-46d5-441d-b497-ce9b459c5b9e
+		summarizeBy: none
+		sourceColumn: CONCATENATED_MOLECULE
+
+		annotation SummarizationSetBy = Automatic
+
+	column CONCATENATED_MOLECULE_CODE
+		dataType: string
+		displayFolder: Sonstiges
+		lineageTag: ac9a28b8-9666-418d-a38c-1c607dff6fef
+		summarizeBy: none
+		sourceColumn: CONCATENATED_MOLECULE_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column PRODUCT_DESCRIPTION
+		dataType: string
+		displayFolder: Produkt
+		lineageTag: 6098a1ea-0183-4fd8-97d5-0061d4577c5a
+		summarizeBy: none
+		sourceColumn: PRODUCT_DESCRIPTION
+
+		annotation SummarizationSetBy = Automatic
+
+	column NAME_APPENDUM
+		dataType: string
+		displayFolder: Produkt
+		lineageTag: b6281dc0-7b58-47ce-b138-e514328404de
+		summarizeBy: none
+		sourceColumn: NAME_APPENDUM
+
+		annotation SummarizationSetBy = Automatic
+
+	column TRADEFORM
+		dataType: string
+		displayFolder: Produkt
+		lineageTag: 9c742c2f-060d-4d2e-a044-f2a5013d3ebe
+		summarizeBy: none
+		sourceColumn: TRADEFORM
+
+		annotation SummarizationSetBy = Automatic
+
+	column CONCENTRATION
+		dataType: string
+		displayFolder: Produkt
+		lineageTag: 822167f5-0dfc-42e8-a9ce-ad480bb0506f
+		summarizeBy: none
+		sourceColumn: CONCENTRATION
+
+		annotation SummarizationSetBy = Automatic
+
+	column COUNTING_UNIT_FACTOR
+		dataType: int64
+		formatString: 0
+		displayFolder: Produkt
+		lineageTag: 771d3935-a8a2-4857-8a70-7f889ef7f828
+		summarizeBy: sum
+		sourceColumn: COUNTING_UNIT_FACTOR
+
+		annotation SummarizationSetBy = Automatic
+
+	column PRODUCT_QUANTITY
+		dataType: string
+		displayFolder: Produkt
+		lineageTag: d09d87e2-4a17-4a14-b201-19b4cfd963ed
+		summarizeBy: none
+		sourceColumn: PRODUCT_QUANTITY
+
+		annotation SummarizationSetBy = Automatic
+
+	column DISTRIBUTOR
+		dataType: string
+		displayFolder: Vertrieb
+		lineageTag: c7716fb2-78ac-44f0-894f-7aecc059fee5
+		summarizeBy: none
+		sourceColumn: DISTRIBUTOR
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation __PBI_SemanticLinks = [{"LinkTarget":{"TableName":"V_IQVIA_REPORTING_PANEL","TableItemName":"DISTRIBUTOR (Gruppen)","ObjectType":4},"LinkType":"UsedInGroup"}]
+
+	column OTC_DESCRIPTION
+		dataType: string
+		displayFolder: Handel
+		lineageTag: 0083c305-6150-456b-b81a-33ef5f75c735
+		summarizeBy: none
+		sourceColumn: OTC_DESCRIPTION
+
+		annotation SummarizationSetBy = Automatic
+
+	column SL_LISTEN_DESCRIPTION
+		dataType: string
+		displayFolder: Handel
+		lineageTag: dd239834-9afa-406b-b270-5529d23b5f46
+		summarizeBy: none
+		sourceColumn: SL_LISTEN_DESCRIPTION
+
+		annotation SummarizationSetBy = Automatic
+
+	column GENERIKA_DESCRIPTION
+		dataType: string
+		displayFolder: Handel
+		lineageTag: e5a0f643-3e46-4423-8beb-0f00cd123ef9
+		summarizeBy: none
+		sourceColumn: GENERIKA_DESCRIPTION
+
+		annotation SummarizationSetBy = Automatic
+
+	column SWISSMEDIC_DESCRIPTION
+		dataType: string
+		displayFolder: Handel
+		lineageTag: 9583ed9b-d9ed-45ac-bb74-45d4201120bc
+		summarizeBy: none
+		sourceColumn: SWISSMEDIC_DESCRIPTION
+
+		annotation SummarizationSetBy = Automatic
+
+	column SWISSMEDICPLUS_DESCRIPTION
+		dataType: string
+		displayFolder: Handel
+		lineageTag: 542c9e7e-3d25-4838-81a1-4b94caab4c55
+		summarizeBy: none
+		sourceColumn: SWISSMEDICPLUS_DESCRIPTION
+
+		annotation SummarizationSetBy = Automatic
+
+	column WIRKSTOFF_GRUPPE_DESCRIPTION
+		dataType: string
+		displayFolder: Produkt
+		lineageTag: 9a4f3b97-7842-473e-8d66-0e6ee9df3492
+		summarizeBy: none
+		sourceColumn: WIRKSTOFF_GRUPPE_DESCRIPTION
+
+		annotation SummarizationSetBy = Automatic
+
+	column PUBLIC_PRICE_INCL_MWST
+		dataType: double
+		displayFolder: Produkt
+		lineageTag: 64bb8042-b810-46d4-a985-7ec7ae7e6a8d
+		summarizeBy: sum
+		sourceColumn: PUBLIC_PRICE_INCL_MWST
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column GROSS_PRICE
+		dataType: double
+		displayFolder: Produkt
+		lineageTag: a2365a76-2192-4190-8144-9bfb7e4201f5
+		summarizeBy: sum
+		sourceColumn: GROSS_PRICE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column LAUNCH_DATE
+		dataType: dateTime
+		formatString: Long Date
+		displayFolder: Produkt
+		lineageTag: 31dabeeb-eeba-4e1b-9930-4821d0d0834e
+		summarizeBy: none
+		sourceColumn: LAUNCH_DATE
+
+		variation Variation
+			isDefault
+			relationship: ea601323-736c-444c-88c2-a59eeae3853c
+			defaultHierarchy: LocalDateTable_5d7fe8e5-332f-4090-9a1c-793fc068b9e5.Datumshierarchie
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CORPORATION
+		dataType: string
+		displayFolder: Vertrieb
+		lineageTag: dbebcfdc-c5e3-4595-a585-09d547cdafba
+		summarizeBy: none
+		sourceColumn: CORPORATION
+
+		annotation SummarizationSetBy = Automatic
+
+	column ATC_L1_PARENT
+		dataType: string
+		displayFolder: Marktdefinition
+		lineageTag: 2a447799-fb22-46bc-9f29-b62050cde1d7
+		summarizeBy: none
+		sourceColumn: ATC_L1_PARENT
+
+		annotation SummarizationSetBy = Automatic
+
+	column ATC_L2_PARENT
+		dataType: string
+		displayFolder: Marktdefinition
+		lineageTag: f929ee2e-8863-4b71-8210-4866c184f8c1
+		summarizeBy: none
+		sourceColumn: ATC_L2_PARENT
+
+		annotation SummarizationSetBy = Automatic
+
+	column ATC_L3_PARENT
+		dataType: string
+		displayFolder: Marktdefinition
+		lineageTag: 0df04f3b-3eac-42fa-9eb1-de61a9cb7b29
+		summarizeBy: none
+		sourceColumn: ATC_L3_PARENT
+
+		annotation SummarizationSetBy = Automatic
+
+	column ATC_L4
+		dataType: string
+		displayFolder: Marktdefinition
+		lineageTag: 502c1e6a-6052-45ed-98ca-cd5afa1cf17e
+		summarizeBy: none
+		sourceColumn: ATC_L4
+
+		annotation SummarizationSetBy = Automatic
+
+	column NEWFORM_L1_PARENT
+		dataType: string
+		displayFolder: Handel
+		lineageTag: b4eee264-6abe-49cf-a1a2-f04956ded205
+		summarizeBy: none
+		sourceColumn: NEWFORM_L1_PARENT
+
+		annotation SummarizationSetBy = Automatic
+
+	column NEWFORM_L2_PARENT
+		dataType: string
+		displayFolder: Handel
+		lineageTag: d31cb361-503e-4446-a726-ffb9af0a55fc
+		summarizeBy: none
+		sourceColumn: NEWFORM_L2_PARENT
+
+		annotation SummarizationSetBy = Automatic
+
+	column NEWFORM_L3_DESCRIPTION
+		dataType: string
+		displayFolder: Handel
+		lineageTag: 96b60fbb-678e-4bcb-a739-5491abda4cfb
+		summarizeBy: none
+		sourceColumn: NEWFORM_L3_DESCRIPTION
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'DISTRIBUTOR (Gruppen)' =
+			SWITCH(
+				TRUE,
+				ISBLANK('V_IQVIA_REPORTING_PANEL'[DISTRIBUTOR]),
+				"(Leer)",
+				'V_IQVIA_REPORTING_PANEL'[DISTRIBUTOR] IN {"Biomed"},
+				"Biomed",
+				"Sonstige"
+			)
+		dataType: string
+		displayFolder: Vertrieb
+		lineageTag: 374684a4-832a-438c-a357-bf1c88f0c84c
+		summarizeBy: none
+		isDataTypeInferred
+
+		extendedProperty GroupingMetadata =
+				{
+				  "version": 0,
+				  "groupedColumns": [
+				    {
+				      "Column": {
+				        "Expression": {
+				          "SourceRef": {
+				            "Entity": "V_IQVIA_REPORTING_PANEL"
+				          }
+				        },
+				        "Property": "DISTRIBUTOR"
+				      }
+				    }
+				  ]
+				}
+
+		annotation GroupingDesignState = {"Version":0,"Sources":[{"Name":"v","Entity":"V_IQVIA_REPORTING_PANEL"}],"GroupedColumns":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"DISTRIBUTOR"}}],"GroupItems":[{"DisplayName":"(Leer)","BlankDefaultPlaceholder":true},{"DisplayName":"Biomed","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"DISTRIBUTOR"}}],"Values":[[{"Literal":{"Value":"'Biomed'"}}]]}}},{"DisplayName":"Sonstige"}]}
+
+		annotation SummarizationSetBy = Automatic
+
+	column RX_OR_OTC
+		dataType: string
+		displayFolder: Handel
+		lineageTag: 074be229-5592-498a-9475-94a52b129479
+		summarizeBy: none
+		sourceColumn: RX_OR_OTC
+
+		annotation SummarizationSetBy = Automatic
+
+	column CALCULATED_VALUE_EX_FACTORY
+		dataType: double
+		displayFolder: Kennzahlen\IQVIA
+		lineageTag: 2e810978-f9c0-4593-9fdd-85ea7e23fd4c
+		summarizeBy: sum
+		sourceColumn: CALCULATED_VALUE_EX_FACTORY
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'CHANEL_CODE (Gruppen)' =
+			SWITCH(
+				TRUE,
+				ISBLANK('V_IQVIA_REPORTING_PANEL'[CHANEL_CODE]),
+				"(Leer)",
+				'V_IQVIA_REPORTING_PANEL'[CHANEL_CODE] IN {"PAP",
+					"VAP"},
+				"APO",
+				'V_IQVIA_REPORTING_PANEL'[CHANEL_CODE] IN {"SDA"},
+				"SD",
+				'V_IQVIA_REPORTING_PANEL'[CHANEL_CODE]
+			)
+		dataType: string
+		displayFolder: Kanal
+		lineageTag: fa6e5ffb-14ae-4d9a-a9bd-4a2e1c37e521
+		summarizeBy: none
+		isDataTypeInferred
+
+		extendedProperty GroupingMetadata =
+				{
+				  "version": 0,
+				  "groupedColumns": [
+				    {
+				      "Column": {
+				        "Expression": {
+				          "SourceRef": {
+				            "Entity": "V_IQVIA_REPORTING_PANEL"
+				          }
+				        },
+				        "Property": "CHANEL_CODE"
+				      }
+				    }
+				  ]
+				}
+
+		annotation GroupingDesignState = {"Version":0,"Sources":[{"Name":"v","Entity":"V_IQVIA_REPORTING_PANEL"}],"GroupedColumns":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"CHANEL_CODE"}}],"GroupItems":[{"DisplayName":"(Leer)","BlankDefaultPlaceholder":true},{"DisplayName":"APO","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"CHANEL_CODE"}}],"Values":[[{"Literal":{"Value":"'PAP'"}}],[{"Literal":{"Value":"'VAP'"}}]]}}},{"DisplayName":"SD","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"CHANEL_CODE"}}],"Values":[[{"Literal":{"Value":"'SDA'"}}]]}}}]}
+
+		annotation SummarizationSetBy = Automatic
+
+	column MANUFACTORER
+		dataType: string
+		displayFolder: Vertrieb
+		lineageTag: 48fe6ef9-2107-43d6-a4aa-c89a1a176b0a
+		summarizeBy: none
+		sourceColumn: MANUFACTORER
+
+		annotation SummarizationSetBy = Automatic
+
+	column MAT_EX_FACTORY_VALUE
+		dataType: int64
+		formatString: 0
+		displayFolder: Kennzahlen\IQVIA
+		lineageTag: a2b3adcf-54d7-4fc1-a5e2-978164a933a6
+		summarizeBy: sum
+		sourceColumn: MAT_EX_FACTORY_VALUE
+
+		annotation SummarizationSetBy = Automatic
+
+	column MAT_RECORD_QUANTITY
+		dataType: int64
+		formatString: 0
+		displayFolder: Kennzahlen\IQVIA
+		lineageTag: ae4a5043-a2cf-4998-ab51-8c245a50538b
+		summarizeBy: sum
+		sourceColumn: MAT_RECORD_QUANTITY
+
+		annotation SummarizationSetBy = Automatic
+
+	column MAT_PUBLIC_VALUE
+		dataType: int64
+		formatString: 0
+		displayFolder: Kennzahlen\IQVIA
+		lineageTag: 49932b38-e1e7-4d9f-971c-f60c04f67a93
+		summarizeBy: sum
+		sourceColumn: MAT_PUBLIC_VALUE
+
+		annotation SummarizationSetBy = Automatic
+
+	partition V_IQVIA_REPORTING_PANEL = m
+		mode: import
+		source =
+				let
+				    Quelle = Exasol.Database("exasol.biomed.ch:8563/C6F67E2248C83AFF8A838E88908C5F1DE62513DDBA5EF74951D84B4C6F977DEF", "Yes"),
+				    MART_Schema = Quelle{[Name="MART",Kind="Schema"]}[Data],
+				    V_IQVIA_REPORTING_PANEL_View = MART_Schema{[Name="V_IQVIA_REPORTING_PANEL",Kind="View"]}[Data]
+				in
+				    V_IQVIA_REPORTING_PANEL_View
+
+	annotation PBI_ResultType = Table
+
